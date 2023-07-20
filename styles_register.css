@@ -68,3 +68,8 @@ body{
     color: white;
     border-radius: 10px;
 }
+
+.img_prev{
+    height: 200px;
+    width: 200px;
+}

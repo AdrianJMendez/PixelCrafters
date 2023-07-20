@@ -22,10 +22,12 @@ header{
 .contenido{
     background: linear-gradient(to bottom,#272626, #312FA4 );
     width: 100%;
-    height: 1000px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    text-align: center;
 }
 
 header img{
@@ -38,7 +40,7 @@ header img{
     position: relative;
     margin-top: 50px;
     text-align: center;
-    
+    color: white;
    
 }
 
@@ -90,4 +92,60 @@ header img{
 .text_bienvenida{
     height: 240px;
     width: 300px;
+    margin-bottom: 20px;
+}
+
+#btn_comienza{
+    height: 40px;
+    width: 210px;
+    margin: 20px;
+    background: none;
+    color: white;
+    border: #FFB84E 2px solid;
+}
+
+.img_prev{
+    height: 200px;
+    width: 200px;
+    border: #FFB84E 3px solid;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.img_carrusel{
+    height: 230px;
+    width: 230px;
+    border: #FFB84E 3px solid;
+    border-radius: 30px;
+    margin: 20px;
+    max-width: 230px;
+}
+
+.custom-text {
+    color: black;
+    text-shadow: 2px 2px 4px #FFB84E;
+  }
+  
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #272626;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+
+#accesos-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
 }
