@@ -11,8 +11,8 @@
 <body>
     <!-- header de la pagina -->
     <header>
-       <img src="assets/Imagenes/Logo (3).png"> 
-       <h3>Pixel Crafters</h3>
+       <img src="assets/Imagenes/Logo (3).png" onclick="landing()"> 
+       <h3 onclick="landing()">Pixel Crafters</h3>
        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
     </header>
 
@@ -22,35 +22,37 @@
         <div id="Categorias">
             <h2>¡Craftea tus ideas!</h2>
             <div class="categorias_d">
-                <div class="d1">
+                <div class="d1" onclick="abrirEmpresas('Ropa')">
                 <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Ropa</p>     
                 </div>
-                <div class="d2">
+                <div class="d2" onclick="abrirEmpresas('Productos_Varios')">
                 <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
-                <p class="nombre_cat">Ropa</p>     
+                <p class="nombre_cat">Posters</p>     
                 </div>
-                <div class="d3">
+                <div class="d3" onclick="abrirEmpresas('Productos_Varios')">
                 <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
-                <p class="nombre_cat">Ropa</p>     
+                <p class="nombre_cat">Tarjetas</p>     
                 </div>
-                <div class="d4">
+                <div class="d4" onclick="abrirEmpresas('Productos_Varios')">
                 <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
-                <p class="nombre_cat">Ropa</p>     
+                <p class="nombre_cat">Libretas</p>     
                 </div>
-                <div class="d5">
+                <div class="d5" onclick="abrirEmpresas('Productos_Varios')">
                 <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
-                <p class="nombre_cat">Ropa</p>     
+                <p class="nombre_cat">Tazas</p>     
                 </div>
             </div>           
         </div>
-        <img src="assets/UI/3.png" alt="" class="text_bienvenida">
-        <img src="assets/UI/4.png" alt="">
-        <button id="btn_comienza"><h3>¡Comienza ahora!</h3></button>
-        <img src="assets/Imagenes/28.jpg" class="img_prev">
-        <h6 class="w-75 mb-40">“Además, con la comodidad de recibir estos hermosos productos directamente en la puerta de tu hogar, la experiencia de tener lo mejor de la moda y la exclusividad nunca ha sido tan fácil."</h6>
+        <div id="info_landing">
+            <img src="assets/UI/3.png" alt="" class="text_bienvenida">
+            <img src="assets/UI/4.png" alt="">
+            <button id="btn_comienza"><h3>¡Comienza ahora!</h3></button>
+            <img src="assets/Imagenes/28.jpg" class="img_prev">
+            <h6 class="w-75 mb-40">“Además, con la comodidad de recibir estos hermosos productos directamente en la puerta de tu hogar, la experiencia de tener lo mejor de la moda y la exclusividad nunca ha sido tan fácil."</h6>
+      </div>
         <!-- Carrusel de Promociones -->
-        <div id="carouselExampleCaptions" class="carousel slide">
+        <div id="carrusel" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -76,15 +78,45 @@
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+            
         </div>
+
+        <!-- Empresas -->
+        <div id="empresas">
+          <div class="caratulas">
+              <img src="assets/Imagenes/Empresa2.png" alt="">
+          </div>
+       </div>
+
+       <!-- productos -->
+       <div id="productos">  
+          <h1>Productos de la marca</h1>
+              <div id="productos_inv">
+                <div class="productosimg">
+                  <img src="assets/Imagenes/1.jpg" alt="" > 
+                </div>
+                <div class="dropdown-center">
+                  <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    detalles
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action two</a></li>
+                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                  </ul>
+                </div>
+              </div>
+              
+        </div>
+
         <!-- footer -->
         <footer>
             <div id="iconos">
@@ -103,8 +135,7 @@
         </footer>
 
     </div>
-
-    <script src="landingcontU.js"></script>
+    <script src="empresas_controlador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/38bde20848.js" crossorigin="anonymous"></script>
 </body>
