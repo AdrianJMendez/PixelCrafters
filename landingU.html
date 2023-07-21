@@ -47,7 +47,7 @@
         <div id="info_landing">
             <img src="assets/UI/3.png" alt="" class="text_bienvenida">
             <img src="assets/UI/4.png" alt="">
-            <button id="btn_comienza"><h3>¡Comienza ahora!</h3></button>
+            <button id="btn_comienza" onclick="abrirPersonalizacion()"><h3>¡Comienza ahora!</h3></button>
             <img src="assets/Imagenes/28.jpg" class="img_prev">
             <h6 class="w-75 mb-40">“Además, con la comodidad de recibir estos hermosos productos directamente en la puerta de tu hogar, la experiencia de tener lo mejor de la moda y la exclusividad nunca ha sido tan fácil."</h6>
       </div>
@@ -98,24 +98,47 @@
 
        <!-- productos -->
        <div id="productos">  
-          <h1>Productos de la marca</h1>
+          <h1 class="texto_bonito">Productos de la marca</h1>
               <div id="productos_inv">
                 <div class="productosimg">
-                  <img src="assets/Imagenes/1.jpg" alt="" > 
+                  <img src="assets/Imagenes/33.jpg" alt="" > 
                 </div>
                 <div class="dropdown-center">
                   <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    detalles
+                    Detalles
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Action two</a></li>
-                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                  <ul class="dropdown-menu menu-compras">
+                    <div class="centered-content">
+                      <h7>Nombre</h7><br>
+                      <h10>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, sequi!</h10><br>
+                      <div class="counter">
+                        <!-- Agrega los atributos onclick a los botones y detén la propagación del evento de clic -->
+                        <button class="btn btn-count" data-action="decrement" onclick="decrement(event)">-</button>
+                        <span class="count-value">0</span>
+                        <button class="btn btn-count" data-action="increment" onclick="increment(event)">+</button>
+                      </div>
+                      <button class="btn_p">GUARDAR</button>
+                      <button class="btn_p">PERSONALIZAR</button>
+                    </div>
                   </ul>
                 </div>
+                
+                
               </div>
               
         </div>
+
+        <!-- Pagina Personalizacion -->
+        <div id="paginaP">
+          <h1 class="texto-bonito">¡Dale vida a tu imaginación!</h1>
+          <h10>Guia para usar el editor</h10>
+          <img src="assets/Imagenes/Editor.png" alt="">
+          <div id="btn_paginap">
+            <button class="btn_p">Elegir Producto</button>
+            <button id="btn_pp"><i class="fa-solid fa-download" style="color: #ffffff;"></i><h6>Descargar</h6></button>
+          </div>
+        </div>
+
 
         <!-- footer -->
         <footer>
@@ -135,6 +158,7 @@
         </footer>
 
     </div>
+
     <script src="empresas_controlador.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/38bde20848.js" crossorigin="anonymous"></script>

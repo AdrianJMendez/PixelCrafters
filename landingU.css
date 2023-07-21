@@ -196,16 +196,20 @@ footer{
 }
 
 #productos{
+    
+     /* display: flex; */
+     display: none;
+     flex-direction: column;
+     align-items: center;
+}
+
+.texto-bonito{
     color: #FFB84E;
     text-shadow:
     -1px -1px 0 white, /* Sombra superior izquierda */
      1px -1px 0 white, /* Sombra superior derecha */
     -1px 1px 0 white, /* Sombra inferior izquierda */
      1px 1px 0 white; /* Sombra inferior derecha */
-     /* display: flex; */
-     display: none;
-     flex-direction: column;
-     align-items: center;
 }
 
 #productos_inv{
@@ -246,3 +250,94 @@ footer{
 .btn-detalles:hover {
     background-color: rgba(255, 255, 255, 0.2); 
   }
+
+.menu-compras{
+    border: #FFB84E 2px solid !important;
+    max-width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+.btn_p{
+    width: 180px;
+    height: 40px;
+    margin: 10px;
+    color: black;
+    border: none;
+    background-color: #FFB84E;
+    border-radius: 15px;
+}
+
+.counter {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn-count {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+
+  .count-value {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .dropdown-menu {
+    position: relative;
+  }
+  
+  .centered-content {
+    text-align: center;
+    margin: auto;
+  }
+  
+#paginaP{
+    width: 100%;
+    height:700px;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#paginaP img{
+    margin: 30px;
+    width: 450px;
+}
+
+#paginaP h10{
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-left: 150px;
+}
+
+#btn_paginap{
+    display: flex;
+
+}
+
+#btn_pp{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: #23A566;
+    border-radius: 15px;
+}

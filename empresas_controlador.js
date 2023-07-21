@@ -47,7 +47,7 @@ const Empresas = [
             "id_producto": "RL001",
             "nombre_producto": "Polo",
             "descripcion": "Polo de algodón para hombre",
-            "imagen_producto": "assets/12/numero.jpg"
+            "imagen_producto": "assets/Imagenes/12.jpg"
           },
           {
             "precio": 90,
@@ -359,6 +359,8 @@ function landing(){
   document.getElementById('carrusel').style.display="block";
   //mostrar elementos
   document.getElementById('empresas').style.display="none"
+  document.getElementById('productos').style.display="none";
+  document.getElementById('paginaP').style.display="none";
   document.querySelector('header').innerHTML=`<img src="assets/Imagenes/Logo (3).png" onclick="landing()"> 
   <h3 onclick="landing()">Pixel Crafters</h3>
   <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>`;
@@ -370,11 +372,42 @@ function abrirEmpresas(categoria){
   document.getElementById('info_landing').style.display="none";
   document.getElementById('carrusel').style.display="none";
   document.getElementById('productos').style.display="none";
+  document.getElementById('paginaP').style.display="none";
   //mostrar elementos
   document.getElementById('empresas').style.display="flex"
   generarEmpresas(categoria);
 };
 
+
+function decrement(event) {
+  const countValue = document.querySelector(".count-value");
+  let count = parseInt(countValue.textContent);
+  if (count > 0) {
+    count--;
+    countValue.textContent = count;
+  }
+  event.stopPropagation(); // Detener la propagación del evento de clic
+}
+
+function increment(event) {
+  const countValue = document.querySelector(".count-value");
+  let count = parseInt(countValue.textContent);
+  count++;
+  countValue.textContent = count;
+  event.stopPropagation(); // Detener la propagación del evento de clic
+}
+
+function abrirPersonalizacion(){
+  //ocultando los elementos innecesarios
+  document.getElementById('Categorias').style.display="none";
+  document.getElementById('info_landing').style.display="none";
+  document.getElementById('carrusel').style.display="none";
+  document.getElementById('productos').style.display="none";
+  document.getElementById('empresas').style.display="none";
+  //mostrar elementos
+  document.getElementById('paginaP').style.display="flex"
+
+};
 
 //funciones de logica del sitio
 
@@ -410,17 +443,26 @@ function generarProductos(productos){
 
   empresa.productos.forEach((producto)=>{
 
-    document.getElementById('productos').innerHTML+=`<div class="productosimg">
+    document.getElementById('productos').innerHTML+=`  <div class="productosimg">
     <img src="${producto.imagen_producto}" alt="" > 
   </div>
   <div class="dropdown-center">
     <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      ${producto.nombre_producto}
+      Detalles
     </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Action two</a></li>
-      <li><a class="dropdown-item" href="#">Action three</a></li>
+    <ul class="dropdown-menu menu-compras">
+      <div class="centered-content">
+        <h7>${producto.nombre_producto}</h7><br>
+        <h10>${producto.descripcion}</h10><br>
+        <div class="counter">
+          <!-- Agrega los atributos onclick a los botones y detén la propagación del evento de clic -->
+          <button class="btn btn-count" data-action="decrement" onclick="decrement(event)">-</button>
+          <span class="count-value">0</span>
+          <button class="btn btn-count" data-action="increment" onclick="increment(event)">+</button>
+        </div>
+        <button class="btn_p">GUARDAR</button>
+        <button class="btn_p" onclick="abrirPersonalizacion()" >PERSONALIZAR</button>
+      </div>
     </ul>
   </div>`;
 
