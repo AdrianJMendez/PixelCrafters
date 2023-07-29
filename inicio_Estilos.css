@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: url(assets/UI/fondo\ login.jpg);
+    background-image: url(assets/UI/fondo_1.jpg);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;
@@ -8,22 +8,22 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    width: 100%;
+   
 }
 
 #logo{
     width: 60px;
     height: 63px;
-   padding-left: 40px;
+   padding-left: 100px;
 
 }
 
 
 .fondoR{
     height: 500px;
-    width: 80%;
-    border: #FFB84E 3px solid;
-    border-radius: 45px;
-    background: linear-gradient(to bottom,#B086E4, #a8a7e3bd );
+    width: 80%; 
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -73,22 +73,35 @@ body{
 
     width: 100vh;
     background-color:  #330590c0;
-    margin-top: 50px;
+    margin-top: 100%;
     height: 50px;
 
 }
 #encabezado{
-    width: 100vh;
+    width: 100%;
     background-color:  #330590c0;
     margin-top: 0;
     height: 60px;
     margin-bottom: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    color: white;
+    font-size: 30px;
 
 }
 @font-face {
     font-family: 'MiFuente'; /* Nombre de la fuente personalizada */
     src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
+  .contenido_pag1{
+
+background-color: rgba(217, 217, 217, 0.719);
+border-radius: 30px;
+
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+  }
+  
