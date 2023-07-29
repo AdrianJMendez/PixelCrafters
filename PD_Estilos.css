@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: url(assets/UI/fondo_1.jpg);
+    background-image: url(assets/UI/fondo_2.jpg);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;
@@ -10,20 +10,22 @@ body{
     align-items: center;
     height: 100%;
     width: 100%;
-   
 }
 
 #logo{
     width: 60px;
     height: 63px;
-   padding-left: 100px;
+   padding-left: 40px;
 
 }
 
 
 .fondoR{
-    height: 500px;
-    width: 80%; 
+    height: 100vh;
+    width: 95%;
+    border: #FFB84E 3px solid;
+    border-radius: 45px;
+    background: linear-gradient(to bottom,#B086E4, #a8a7e3bd );
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -94,5 +96,28 @@ body{
     font-family: 'MiFuente'; /* Nombre de la fuente personalizada */
     src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
+  .contenido_pag2{
 
+background-color: rgba(217, 217, 217, 0.719);
+border-radius: 30px;
+
+width: 100%;
+display: flex;
+flex-direction: row;
+align-items: center; 
+justify-content: space-evenly;
+height: 130px;
+
+  }
+  .button_pag2{
+    border-radius: 20px;
+    margin-bottom: 3px;
+    height: 50px;
+    color: white;
+  }
+  .Contenedor_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
   
