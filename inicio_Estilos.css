@@ -95,4 +95,11 @@ body{
     src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
 
-  
+.contenido_pag1{
+    background-color: rgba(217, 217, 217, 0.637);
+    border-radius: 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
