@@ -1,3 +1,5 @@
+export default Empresas;
+
 
 const Empresas = [
     {
