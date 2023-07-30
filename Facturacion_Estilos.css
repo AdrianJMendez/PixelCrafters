@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    background-image: url(assets/UI/fondo_3.jpg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo{
+    width: 60px;
+    height: 63px;
+   padding-left: 40px;
+
+}
+
+
+.fondoR{
+    height: 100%;
+    width: 90%;
+    border: #FFB84E 3px solid;
+    border-radius: 45px;
+    background: linear-gradient(to bottom,#B086E4, #a8a7e3bd );
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+   
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fondoR img{
+    z-index: 0;
+    margin-top: 0;
+    height: 140px;
+    width: 100%;
+}
+
+.fondoR h2{
+    font-family: pixelation, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 4px;
+    z-index: 1;
+    margin-top: -30px;
+}
+
+.fondoR input {
+  background-color: transparent;
+  border: none; 
+  border-bottom: 4px solid white; 
+  padding: 5px 0;
+  color: white; 
+  margin-top: 10px;
+}
+
+.fondoR input::placeholder {
+    color: rgba(255, 255, 255, 0.737); 
+}
+
+#btn-confirmar{
+    margin: 50px;
+    border: none;
+    background-color: #4A48BB;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border-radius: 10px;
+}
+#more_info{
+
+    width: 100vh;
+    background-color:  #330590c0;
+    margin-top: 100%;
+    height: 50px;
+
+}
+#encabezado{
+    width: 100%;
+    background-color:  #330590c0;
+    margin-top: 0;
+    height: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+
+}
+@font-face {
+    font-family: 'MiFuente'; 
+    src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); 
+  }
+  .logotipo{
+   display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  }
+  #info_Fac{
+
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50%;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #fff; 
+    display: flex;
+    align-items: center;
+}
+
+
+td {
+    border: 1px solid #fff; 
+    padding: 10px;
+    color: #000; 
+}
+
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+#tabla{
+padding-top: 10px;
+
+}
+#total{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+}
+#Contenido_fac{
+
+background-color:rgba(234, 234, 234, 0.582) ;
+border-radius: 30px;
+margin-top: 10px;
+margin-bottom: 20px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 20px;
+}
