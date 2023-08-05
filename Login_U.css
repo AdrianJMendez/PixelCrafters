@@ -92,3 +92,11 @@ body{
     font-family: 'MiFuente'; /* Nombre de la fuente personalizada */
     src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
+  .boton:hover{
+    background-color: #6f3686 !important;
+    cursor: pointer;
+
+  }
+  .olvido:hover{
+    color: rgb(25, 0, 255);
+  }
