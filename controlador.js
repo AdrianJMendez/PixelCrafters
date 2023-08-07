@@ -206,5 +206,59 @@ function generarpag_factura(){
     `;
 
 }
+function generarpag_Listado(){
+
+    document.getElementById('imgfondo').style.backgroundImage= "url(assets/UI/fondo_3.jpg)";
+    document.getElementById('cuerpo').innerHTML='';
+    document.getElementById('cuerpo').innerHTML=`
+    <div style="background-color:rgba(203, 108, 230, 0.57); border-radius: 25px; width: 200px; color: white; " ><h3 style="margin-left: 60px;">Pedidos</h3></div>
+        <div><img src="assets/Imagenes/mapa.png" alt="" style="width: 100%; border-radius: 20px;"></div>
+    <div class="fondoR_2">
+        <h3>Estado de los paquetes</h3>
+        <div class="contenido_pag2">
+            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px;" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP" >
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black; font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+              
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+    </div>
+    `;
+
+}
 
 generarcontenido();

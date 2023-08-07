@@ -146,6 +146,7 @@ body{
     align-items: center; 
     justify-content: space-evenly;
     height: 130px;
+    margin-bottom: 10px;
     
       }
 
@@ -242,4 +243,10 @@ body{
       }
       tbody{
         width: 100%;
+      }
+      /*pagina de pedidos*/
+      .Contenedor_buttonP{
+        display: flex;
+       flex-wrap: wrap;
+        margin-left: 20px;
       }
