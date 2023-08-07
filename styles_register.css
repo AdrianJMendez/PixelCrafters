@@ -11,6 +11,7 @@ body{
 }
 
 #logo{
+    position: absolute;
     margin: 30px;
     height: 100px;
     width: 100px;
@@ -19,6 +20,8 @@ body{
 
 
 .fondoR{
+    position: absolute;
+    margin-top: 150px;
     height: 500px;
     width: 80%;
     border: #FFB84E 3px solid;
@@ -30,6 +33,7 @@ body{
     color: white;
     align-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 .fondoR img{
@@ -72,4 +76,63 @@ body{
 .img_prev{
     height: 200px;
     width: 200px;
+}
+
+svg {
+    width: 100vw;
+    height: 100vh;
+}
+
+/**********PRESETS************/
+body.glass rect {
+    opacity: .8;
+}
+.RGB rect{
+    transition: fill 5s;
+}
+
+.RGB .yellow {
+    fill: rgba(243, 239, 25, 0.7);
+}
+
+.RGB .red {
+    fill: rgba(255, 0, 0, .7);
+}
+
+.RGB .blue {
+    fill: rgba(0, 0, 255, .7);
+}
+
+.RGB .green {
+    fill: rgba(82, 197, 16, 0.7);
+}
+body.particles {
+    background-color: rgba(10, 10, 15, 1);
+}
+.maze .blocker {
+    transition: fill 5s;
+    fill:white;
+}
+.maze .base {
+    fill:black;
+}
+.maze .solid1 {
+    fill:rgb(238, 186, 17); 
+}
+.maze .solid2 {
+    fill:cyan;
+}
+.maze .solid3 {
+    fill:rgb(248, 171, 184);
+}
+.maze .solid4 {
+    fill:rgb(236, 6, 6);
+}
+
+.invisible {
+    display:none;
+}
+
+#controls{
+    display: none;
 }

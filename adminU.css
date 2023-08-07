@@ -7,7 +7,7 @@ body{
 header{
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +16,11 @@ header{
     overflow: hidden;
     background: linear-gradient(to left,#780E89, #370E89, #123D8F );
     z-index: 2;
+
 }
 
 header img{
-    height: 60px;
+    height: 65px;
     width: 60px;
 }
 
@@ -50,17 +51,41 @@ header img{
     /* display: none; */
     flex-direction: column;   
     align-items: center;
+
 }
+
+.borde-arcoiris{
+    border: 10px solid;
+	border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+    /* border-top:none; */
+	border-bottom: none;
+    border-left: none;
+    border-right: none;
+    animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 
 #menu-admin i{
     position: relative;
-    top: 100px;
+    top: 110px;
     font-size: 80px;
 }
 
 #menu-admin h3{
     position: relative;
-    top: 170px;
+    top: 180px;
 }
 
 #bton{
