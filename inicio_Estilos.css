@@ -250,3 +250,47 @@ body{
        flex-wrap: wrap;
         margin-left: 20px;
       }
+      /* pag de pedidos disponibles pero con mapa*/
+      .fixed-div {
+        position: fixed;
+        top: 10;
+        width: 80%;
+        height: 80%;
+        border-radius: 30px;
+       color: white;
+        background-color: rgba(121, 14, 137, 0.705);
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* pagina para menu*/
+    .fixed-div2 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+       
+       color: white;
+        background-color:rgba(52, 5, 144, 1) ;
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #menu{
+      background-color: rgba(255, 253, 253, 1);
+      height: 60%;
+      border-radius: 10px;
+      width: 95%;
+      color: black;
+     
+    }
+    .opciones_menu{
+      display: flex;
+     margin-top: 20px;
+     margin-bottom: 20px;
+    }
