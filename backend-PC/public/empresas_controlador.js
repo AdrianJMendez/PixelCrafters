@@ -5,7 +5,7 @@ const Empresas = [
     {
         "categoria": "Ropa",
         "nombre": "Broks Brothers",
-        "imagen": "assets/Imagenes/Empresa2.png",
+        "imagen": "/public/assets/Imagenes/Empresa2.png",
         "productos": [
           {
             "precio": 50,
@@ -14,7 +14,7 @@ const Empresas = [
             "id_producto": "BB001",
             "nombre_producto": "Camisa de vestir",
             "descripcion": "Camisa de vestir para caballero",
-            "imagen_producto": "assets/Imagenes/1.jpg"
+            "imagen_producto": "/public/assets/Imagenes/1.jpg"
           },
           {
             "precio": 60,
@@ -23,7 +23,7 @@ const Empresas = [
             "id_producto": "BB002",
             "nombre_producto": "Pantalón",
             "descripcion": "Pantalón formal para caballero",
-            "imagen_producto": "assets/Imagenes/2.jpg"
+            "imagen_producto": "/public/assets/Imagenes/2.jpg"
           },
           {
             "precio": 70,
@@ -32,7 +32,7 @@ const Empresas = [
             "id_producto": "BB003",
             "nombre_producto": "Vestido",
             "descripcion": "Vestido elegante para dama",
-            "imagen_producto": "assets/Imagenes/3.jpg"
+            "imagen_producto": "/public/assets/Imagenes/3.jpg"
           }
         ]
       },
@@ -40,7 +40,7 @@ const Empresas = [
       {
         "categoria": "Ropa",
         "nombre": "Ralph Lauren",
-        "imagen": "assets/Imagenes/Empresa8.png",
+        "imagen": "/public/assets/Imagenes/Empresa8.png",
         "productos": [
           {
             "precio": 80,
@@ -49,7 +49,7 @@ const Empresas = [
             "id_producto": "RL001",
             "nombre_producto": "Polo",
             "descripcion": "Polo de algodón para hombre",
-            "imagen_producto": "assets/Imagenes/12.jpg"
+            "imagen_producto": "/public/assets/Imagenes/12.jpg"
           },
           {
             "precio": 90,
@@ -58,7 +58,7 @@ const Empresas = [
             "id_producto": "RL002",
             "nombre_producto": "Chamarra",
             "descripcion": "Chamarra de cuero para hombre",
-            "imagen_producto": "assets/Imagenes/32.jpg"
+            "imagen_producto": "/public/assets/Imagenes/32.jpg"
           },
           {
             "precio": 100,
@@ -67,7 +67,7 @@ const Empresas = [
             "id_producto": "RL003",
             "nombre_producto": "Vestido",
             "descripcion": "Vestido de noche para mujer",
-            "imagen_producto": "assets/Imagenes/4.jpg"
+            "imagen_producto": "/public/assets/Imagenes/4.jpg"
           }
         ]
       },
@@ -75,7 +75,7 @@ const Empresas = [
       {
         "categoria": "Ropa",
         "nombre": "Hugo Boss",
-        "imagen": "assets/Imagenes/Empresa1.png",
+        "imagen": "/public/assets/Imagenes/Empresa1.png",
         "productos": [
           {
             "precio": 120,
@@ -84,7 +84,7 @@ const Empresas = [
             "id_producto": "HB001",
             "nombre_producto": "Traje",
             "descripcion": "Traje de negocios para hombre",
-            "imagen_producto": "assets/Imagenes/7.jpg"
+            "imagen_producto": "/public/assets/Imagenes/7.jpg"
           },
           {
             "precio": 130,
@@ -93,7 +93,7 @@ const Empresas = [
             "id_producto": "HB002",
             "nombre_producto": "Corbata",
             "descripcion": "Corbata de seda para hombre",
-            "imagen_producto": "assets/Imagenes/22.jpg"
+            "imagen_producto": "/public/assets/Imagenes/22.jpg"
           },
           {
             "precio": 110,
@@ -102,7 +102,7 @@ const Empresas = [
             "id_producto": "HB003",
             "nombre_producto": "Blusa",
             "descripcion": "Blusa elegante para mujer",
-            "imagen_producto": "assets/Imagenes/26.jpg"
+            "imagen_producto": "/public/assets/Imagenes/26.jpg"
           }
         ]
       },
@@ -110,7 +110,7 @@ const Empresas = [
       {
         "categoria": "Ropa",
         "nombre": "J Crew",
-        "imagen": "assets/Imagenes/Empresa4.png",
+        "imagen": "/public/assets/Imagenes/Empresa4.png",
         "productos": [
           {
             "precio": 60,
@@ -119,7 +119,7 @@ const Empresas = [
             "id_producto": "JC001",
             "nombre_producto": "Saco",
             "descripcion": "Saco de lana para hombre",
-            "imagen_producto": "assets/Imagenes/32.jpg"
+            "imagen_producto": "/public/assets/Imagenes/32.jpg"
           },
           {
             "precio": 50,
@@ -128,7 +128,7 @@ const Empresas = [
             "id_producto": "JC002",
             "nombre_producto": "Camisa",
             "descripcion": "Camisa casual para hombre",
-            "imagen_producto": "assets/Imagenes/6.jpg"
+            "imagen_producto": "/public/assets/Imagenes/6.jpg"
           },
           {
             "precio": 70,
@@ -137,7 +137,7 @@ const Empresas = [
             "id_producto": "JC003",
             "nombre_producto": "Falda",
             "descripcion": "Falda a la rodilla para mujer",
-            "imagen_producto": "assets/Imagenes/16.jpg"
+            "imagen_producto": "/public/assets/Imagenes/16.jpg"
           }
         ]
       },
@@ -145,7 +145,7 @@ const Empresas = [
       {
         "categoria": "Ropa",
         "nombre": "Nike",
-        "imagen": "assets/Imagenes/Empresa10.png",
+        "imagen": "/public/assets/Imagenes/Empresa10.png",
         "productos": [
           {
             "precio": 90,
@@ -154,7 +154,7 @@ const Empresas = [
             "id_producto": "NK001",
             "nombre_producto": "Tenis",
             "descripcion": "Tenis deportivos para hombre",
-            "imagen_producto": "assets/Imagenes/10.jpg"
+            "imagen_producto": "/public/assets/Imagenes/10.jpg"
           },
           {
             "precio": 80,
@@ -163,7 +163,7 @@ const Empresas = [
             "id_producto": "NK002",
             "nombre_producto": "Playera",
             "descripcion": "Playera de manga corta para mujer",
-            "imagen_producto": "assets/Imagenes/11.jpg"
+            "imagen_producto": "/public/assets/Imagenes/11.jpg"
           },
           {
             "precio": 100,
@@ -172,7 +172,7 @@ const Empresas = [
             "id_producto": "NK003",
             "nombre_producto": "Shorts",
             "descripcion": "Shorts deportivos para hombre",
-            "imagen_producto": "assets/Imagenes/24.jpg"
+            "imagen_producto": "/public/assets/Imagenes/24.jpg"
           }
         ]
       },
@@ -180,7 +180,7 @@ const Empresas = [
       {
         "categoria": "Productos_Varios",
         "nombre": "Urban Outfitters",
-        "imagen": "assets/Imagenes/Empresa5.png",
+        "imagen": "/public/assets/Imagenes/Empresa5.png",
         "productos": [
           {
             "precio": 15,
@@ -189,7 +189,7 @@ const Empresas = [
             "id_producto": "UO001",
             "nombre_producto": "posters",
             "descripcion": "Poster decorativo",
-            "imagen_producto": "assets/Imagenes/31.jpg"
+            "imagen_producto": "/public/assets/Imagenes/31.jpg"
           },
           {
             "precio": 10,
@@ -198,7 +198,7 @@ const Empresas = [
             "id_producto": "UO002",
             "nombre_producto": "tazas",
             "descripcion": "Taza con diseño",
-            "imagen_producto": "assets/Imagenes/33.jpg"
+            "imagen_producto": "/public/assets/Imagenes/33.jpg"
           },
           {
             "precio": 5,
@@ -207,7 +207,7 @@ const Empresas = [
             "id_producto": "UO003",
             "nombre_producto": "tarjetas",
             "descripcion": "Tarjetas de felicitación",
-            "imagen_producto": "assets/Imagenes/38.jpg"
+            "imagen_producto": "/public/assets/Imagenes/38.jpg"
           }
         ]
       },
@@ -215,7 +215,7 @@ const Empresas = [
       {
         "categoria": "Productos_Varios",
         "nombre": "Target",
-        "imagen": "assets/Imagenes/Empresa6.png",
+        "imagen": "/public/assets/Imagenes/Empresa6.png",
         "productos": [
           {
             "precio": 25,
@@ -224,7 +224,7 @@ const Empresas = [
             "id_producto": "TG001",
             "nombre_producto": "tazas",
             "descripcion": "Taza con estampados únicos",
-            "imagen_producto": "assets/Imagenes/39.jpg"
+            "imagen_producto": "/public/assets/Imagenes/39.jpg"
           },
           {
             "precio": 15,
@@ -233,7 +233,7 @@ const Empresas = [
             "id_producto": "TG002",
             "nombre_producto": "tazas",
             "descripcion": "Botella reutilizable",
-            "imagen_producto": "assets/Imagenes/35.jpg"
+            "imagen_producto": "/public/assets/Imagenes/35.jpg"
           },
           {
             "precio": 20,
@@ -242,7 +242,7 @@ const Empresas = [
             "id_producto": "TG003",
             "nombre_producto": "tarjetas",
             "descripcion": "Tarjeta decorativo",
-            "imagen_producto": "assets/Imagenes/36.jpg"
+            "imagen_producto": "/public/assets/Imagenes/36.jpg"
           }
         ]
       },
@@ -250,7 +250,7 @@ const Empresas = [
       {
         "categoria": "Productos_Varios",
         "nombre": "Staples",
-        "imagen": "assets/Imagenes/Empresa7.png",
+        "imagen": "/public/assets/Imagenes/Empresa7.png",
         "productos": [
           {
             "precio": 8,
@@ -259,7 +259,7 @@ const Empresas = [
             "id_producto": "SP001",
             "nombre_producto": "libretas",
             "descripcion": "Libretas con espiral",
-            "imagen_producto": "assets/Imagenes/38.jpg"
+            "imagen_producto": "/public/assets/Imagenes/38.jpg"
           },
           {
             "precio": 5,
@@ -268,7 +268,7 @@ const Empresas = [
             "id_producto": "SP002",
             "nombre_producto": "Bolígrafos",
             "descripcion": "Bolígrafos de tinta gel",
-            "imagen_producto": "assets/Imagenes/28.jpg"
+            "imagen_producto": "/public/assets/Imagenes/28.jpg"
           },
           {
             "precio": 15,
@@ -277,7 +277,7 @@ const Empresas = [
             "id_producto": "SP003",
             "nombre_producto": "libretas",
             "descripcion": "Kibreta multifuncional",
-            "imagen_producto": "assets/Imagenes/27.jpg"
+            "imagen_producto": "/public/assets/Imagenes/27.jpg"
           }
         ]
       },
@@ -285,7 +285,7 @@ const Empresas = [
       {
         "categoria": "Productos_Varios",
         "nombre": "Office Depot",
-        "imagen": "assets/Imagenes/Empresa9.png",
+        "imagen": "/public/assets/Imagenes/Empresa9.png",
         "productos": [
           {
             "precio": 12,
@@ -294,7 +294,7 @@ const Empresas = [
             "id_producto": "OD001",
             "nombre_producto": "libretas",
             "descripcion": "Agendas con diseños",
-            "imagen_producto": "assets/Imagenes/27.jpg"
+            "imagen_producto": "/public/assets/Imagenes/27.jpg"
           },
           {
             "precio": 6,
@@ -303,7 +303,7 @@ const Empresas = [
             "id_producto": "OD002",
             "nombre_producto": "lápices",
             "descripcion": "Lápices de colores",
-            "imagen_producto": "assets/Imagenes/17.jpg"
+            "imagen_producto": "/public/assets/Imagenes/17.jpg"
           },
           {
             "precio": 25,
@@ -312,7 +312,7 @@ const Empresas = [
             "id_producto": "OD003",
             "nombre_producto": "posters",
             "descripcion": "Posters de Animaciones",
-            "imagen_producto": "assets/Imagenes/18.jpg"
+            "imagen_producto": "/public/assets/Imagenes/18.jpg"
           }
         ]
       },
@@ -320,7 +320,7 @@ const Empresas = [
       {
         "categoria": "Productos_Varios",
         "nombre": "Walmart",
-        "imagen": "assets/Imagenes/Empresa3.png",
+        "imagen": "/public/assets/Imagenes/Empresa3.png",
         "productos": [
           {
             "precio": 20,
@@ -329,7 +329,7 @@ const Empresas = [
             "id_producto": "WM001",
             "nombre_producto": "posters",
             "descripcion": "Posters de fútbol",
-            "imagen_producto": "assets/Imagenes/15.jpg"
+            "imagen_producto": "/public/assets/Imagenes/15.jpg"
           },
           {
             "precio": 30,
@@ -338,7 +338,7 @@ const Empresas = [
             "id_producto": "WM002",
             "nombre_producto": "libretas",
             "descripcion": "Agendas con diseños",
-            "imagen_producto": "assets/Imagenes/13.jpg"
+            "imagen_producto": "/public/assets/Imagenes/13.jpg"
           },
           {
             "precio": 40,
@@ -347,7 +347,7 @@ const Empresas = [
             "id_producto": "WM003",
             "nombre_producto": "lápices",
             "descripcion": "Lápices de colores",
-            "imagen_producto": "assets/Imagenes/19.jpg"
+            "imagen_producto": "/public/assets/Imagenes/19.jpg"
           }
         ]
       }    
@@ -363,7 +363,7 @@ function landing(){
   document.getElementById('empresas').style.display="none"
   document.getElementById('productos').style.display="none";
   document.getElementById('paginaP').style.display="none";
-  document.querySelector('header').innerHTML=`<img src="assets/Imagenes/Logo (3).png" onclick="landing()"> 
+  document.querySelector('header').innerHTML=`<img src="/public/assets/Imagenes/Logo (3).png" onclick="landing()"> 
   <h3 onclick="landing()">Pixel Crafters</h3>
   <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>`;
 };
@@ -416,7 +416,7 @@ function abrirPersonalizacion(){
 function generarEmpresas(categoria){
 
   //cambiamos el header
-  document.querySelector('header').innerHTML=`<img src="assets/Imagenes/Logo (3).png" onclick="landing()"> 
+  document.querySelector('header').innerHTML=`<img src="/public/assets/Imagenes/Logo (3).png" onclick="landing()"> 
   <h3 onclick="landing()">Pixel Crafters</h3>
   <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl" style="color: #fafafa;"></i>`;
   //limpiamos el contenido

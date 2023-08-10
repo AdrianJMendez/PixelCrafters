@@ -3,7 +3,7 @@ body{
     margin: 0;
     color: white;
     margin: 0;
-    background-image: url(assets/UI/6.png);
+    background-image: url(/public/assets/UI/6.png);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;

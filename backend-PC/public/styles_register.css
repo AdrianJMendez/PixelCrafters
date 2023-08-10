@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: url(assets/UI/2.png);
+    background-image: url(/public/assets/UI/2.png);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;

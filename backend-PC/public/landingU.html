@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelCrafters</title>
-    <link rel="icon" href="assets/Imagenes/Logo (3).png" type="image/x-icon">
-    <link rel="stylesheet" href="landingU.css">
+    <link rel="icon" href="/public/assets/Imagenes/Logo (3).png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/landingU.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
     <!-- header de la pagina -->
     <header>
-       <img src="assets/Imagenes/Logo (3).png" onclick="landing()"> 
+       <img src="/public/assets/Imagenes/Logo (3).png" onclick="landing()"> 
        <h3 onclick="landing()">Pixel Crafters</h3>
        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
     </header>
@@ -23,32 +23,32 @@
             <h2>¡Craftea tus ideas!</h2>
             <div class="categorias_d">
                 <div class="d1" onclick="abrirEmpresas('Ropa')">
-                <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
+                <img class="img_cat" src="/public/assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Ropa</p>     
                 </div>
                 <div class="d2" onclick="abrirEmpresas('Productos_Varios')">
-                <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
+                <img class="img_cat" src="/public/assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Posters</p>     
                 </div>
                 <div class="d3" onclick="abrirEmpresas('Productos_Varios')">
-                <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
+                <img class="img_cat" src="/public/assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Tarjetas</p>     
                 </div>
                 <div class="d4" onclick="abrirEmpresas('Productos_Varios')">
-                <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
+                <img class="img_cat" src="/public/assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Libretas</p>     
                 </div>
                 <div class="d5" onclick="abrirEmpresas('Productos_Varios')">
-                <img class="img_cat" src="assets/Imagenes/15.jpg" alt="">
+                <img class="img_cat" src="/public/assets/Imagenes/15.jpg" alt="">
                 <p class="nombre_cat">Tazas</p>     
                 </div>
             </div>           
         </div>
         <div id="info_landing">
-            <img src="assets/UI/3.png" alt="" class="text_bienvenida">
-            <img src="assets/UI/4.png" alt="">
+            <img src="/public/assets/UI/3.png" alt="" class="text_bienvenida">
+            <img src="/public/assets/UI/4.png" alt="">
             <button id="btn_comienza" onclick="abrirPersonalizacion()"><h3>¡Comienza ahora!</h3></button>
-            <img src="assets/Imagenes/28.jpg" class="img_prev">
+            <img src="/public/assets/Imagenes/28.jpg" class="img_prev">
             <h6 class="w-75 mb-40">“Además, con la comodidad de recibir estos hermosos productos directamente en la puerta de tu hogar, la experiencia de tener lo mejor de la moda y la exclusividad nunca ha sido tan fácil."</h6>
       </div>
         <!-- Carrusel de Promociones -->
@@ -60,19 +60,19 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="assets/Imagenes/34.jpg" class="d-block w-100 img_carrusel" alt="...">
+                <img src="/public/assets/Imagenes/34.jpg" class="d-block w-100 img_carrusel" alt="...">
                 <div class="carousel-caption">
                     <h1 class="custom-text">Mas Vendidos</h1>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/Imagenes/32.jpg" class="d-block w-100 img_carrusel" alt="...">
+                <img src="/public/assets/Imagenes/32.jpg" class="d-block w-100 img_carrusel" alt="...">
                 <div class="carousel-caption">
                   <h1 class="custom-text">Ofertas</h1>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/Imagenes/38.jpg" class="d-block w-100 img_carrusel" alt="...">
+                <img src="/public/assets/Imagenes/38.jpg" class="d-block w-100 img_carrusel" alt="...">
                 <div class="carousel-caption">
                   <h1 class="custom-text">Nuevos</h1>
                 </div>
@@ -92,7 +92,7 @@
         <!-- Empresas -->
         <div id="empresas">
           <div class="caratulas">
-              <img src="assets/Imagenes/Empresa2.png" alt="">
+              <img src="/public/assets/Imagenes/Empresa2.png" alt="">
           </div>
        </div>
 
@@ -101,7 +101,7 @@
           <h1 class="texto_bonito">Productos de la marca</h1>
               <div id="productos_inv">
                 <div class="productosimg">
-                  <img src="assets/Imagenes/33.jpg" alt="" > 
+                  <img src="/public/assets/Imagenes/33.jpg" alt="" > 
                 </div>
                 <div class="dropdown-center">
                   <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -132,7 +132,7 @@
         <div id="paginaP">
           <h1 class="texto-bonito">¡Dale vida a tu imaginación!</h1>
           <h10>Guia para usar el editor</h10>
-          <img src="assets/Imagenes/Editor.png" alt="">
+          <img src="/public/assets/Imagenes/Editor.png" alt="">
           <div id="btn_paginap">
             <button class="btn_p">Elegir Producto</button>
             <button id="btn_pp"><i class="fa-solid fa-download" style="color: #ffffff;"></i><h6>Descargar</h6></button>

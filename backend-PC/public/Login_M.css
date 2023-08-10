@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-image: url(assets/UI/fondo\ login\ motociclistas.jpg);
+    background-image: url(/public/assets/UI/fondo\ login\ motociclistas.jpg);
     background-repeat: no-repeat;
     background-position: 100%;
     background-size: cover;
@@ -90,5 +90,5 @@ body{
 }
 @font-face {
     font-family: 'MiFuente'; /* Nombre de la fuente personalizada */
-    src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
+    src: url('/public/assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
