@@ -26,14 +26,14 @@ document.getElementById('cuerpo').innerHTML+=`
 
 }
 function generarPD(){
-document.getElementById('imgfondo').style.backgroundImage= "url(assets/UI/fondo_2.jpg)";
+document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_2.jpg)";
 document.getElementById('cuerpo').innerHTML='';
 document.getElementById('cuerpo').innerHTML=`
 
 
 <div class="fondoR_2">
 <div class="contenido_pag2">
-    <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+    <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
     <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
     <div class="Contenedor_button">
         <button class="button_pag2" style="background-color:rgba(133, 68, 143, 1) ;">Tomar Pedido</button>
@@ -41,7 +41,7 @@ document.getElementById('cuerpo').innerHTML=`
     </div>
 </div>
 <div class="contenido_pag2">
-    <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+    <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
     <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
     <div class="Contenedor_button">
         <button class="button_pag2" style="background-color:rgba(133, 68, 143, 1) ;">Tomar Pedido</button>
@@ -49,7 +49,7 @@ document.getElementById('cuerpo').innerHTML=`
     </div>
 </div>
 <div class="contenido_pag2">
-    <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+    <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
     <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
     <div class="Contenedor_button" >
         <button class="button_pag2" style="background-color:rgba(133, 68, 143, 1) ;">Tomar Pedido</button>
@@ -57,7 +57,7 @@ document.getElementById('cuerpo').innerHTML=`
     </div>
 </div>
 <div class="contenido_pag2">
-    <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+    <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
     <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
     <div class="Contenedor_button">
         <button class="button_pag2" style="background-color:rgba(133, 68, 143, 1) ;">Tomar Pedido</button>
@@ -80,7 +80,7 @@ function generarpagFinanzas(){
     <div style="background-color:rgba(203, 108, 230, 0.57); border-radius: 25px; width: 200px; color: white; " ><h3 style="margin-left: 60px;">Finanzas</h3></div>
     <div class="fondoR_2">
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_button">
                 <button class="button_pag2" style="background-color:rgba(19, 239, 0, 1) ;">+(total*25%)</button>
@@ -88,7 +88,7 @@ function generarpagFinanzas(){
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_button">
                 <button class="button_pag2" style="background-color:rgba(19, 239, 0, 1);"> +(total*25%)</button>
@@ -96,7 +96,7 @@ function generarpagFinanzas(){
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_button" >
                 <button class="button_pag2" style="background-color:rgba(19, 239, 0, 1) ;">+(total*25%)</button>
@@ -104,7 +104,7 @@ function generarpagFinanzas(){
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_button">
                 <button class="button_pag2" style="background-color:rgba(19, 239, 0, 1) ;">+(total*25%)</button>
@@ -118,7 +118,7 @@ function generarpagFinanzas(){
 
 }
 function generarpag_factura(){
-    document.getElementById('imgfondo').style.backgroundImage= "url(assets/UI/fondo_3.jpg)";
+    document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_3.jpg)";
     document.getElementById('cuerpo').innerHTML='';
     document.getElementById('cuerpo').innerHTML=`
     <div style="background-color: rgba(203, 108, 230, 0.57); border-radius: 30px; width: 150px;"><h3 style="margin-left: 30px; color: white;">Facturacion</h3></div>
@@ -128,7 +128,7 @@ function generarpag_factura(){
     
          
             <div class="logotipo">
-                <img src="assets/Imagenes/Logo (3).png" style="width: 60px;height: 60px;" alt="">
+                <img src="/public/assets/Imagenes/Logo (3).png" style="width: 60px;height: 60px;" alt="">
                 <h3>PixelCrafters</h3>
                 <h5>xx/xx/xxx</h5>
             </div>
@@ -208,7 +208,7 @@ function generarpag_factura(){
 }
 function generarpag_Listado(){
 
-    document.getElementById('imgfondo').style.backgroundImage= "url(assets/UI/fondo_3.jpg)";
+    document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_3.jpg)";
     document.getElementById('cuerpo').innerHTML='';
     document.getElementById('cuerpo').innerHTML=`
     <div style="background-color:rgba(203, 108, 230, 0.57); border-radius: 25px; width: 200px; color: white; " ><h3 style="margin-left: 60px;">Pedidos</h3></div>
@@ -216,44 +216,44 @@ function generarpag_Listado(){
     <div class="fondoR_2">
         <h3>Estado de los paquetes</h3>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_buttonP">
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px;" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px;" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_buttonP">
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_buttonP" >
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
             </div>
         </div>
         <div class="contenido_pag2">
-            <img src="assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
             <p style="color: black; font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
             <div class="Contenedor_buttonP">
               
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="assets/Imagenes/iconos/check.png" alt=""> 
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
             </div>
         </div>
     </div>
@@ -278,16 +278,16 @@ function menu(){
     <button class="btn btn-primary" data-toggle="collapse" data-target="#miCollapse" id="boton_menu">Mostrar/Ocultar Contenido</button>
     <div id="miCollapse" class="collapse mt-3">
     <div class="fixed-div2">
-    <img src="assets/Imagenes/iconos/flecha.png" alt="" style="width: 50px; margin-left: 90%;" onclick="ocultarmenu()">
-    <img src="assets/Imagenes/Logo (3).png" style="width: 100px; height: 100px;" alt="">
+    <img src="/public/assets/Imagenes/iconos/flecha.png" alt="" style="width: 50px; margin-left: 90%;" onclick="ocultarmenu()">
+    <img src="/public/assets/Imagenes/Logo (3).png" style="width: 100px; height: 100px;" alt="">
     <h4 style="font-size: 30px;">PixelCrafters</h4>
     <div id="menu">
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/casa.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Inicio</h3> </div>
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/perfil motorista negro.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Perfil</h3> </div>
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/pngwing.com (5).png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Pedidos</h3> </div>
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/finanzas.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Finanzas</h3> </div>
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/historial.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Historial</h3> </div>
-        <div  class="opciones_menu"><img src="assets/Imagenes/iconos/llamada.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Contacto Admin</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/casa.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Inicio</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/perfil motorista negro.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Perfil</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Pedidos</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/finanzas.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Finanzas</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/historial.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Historial</h3> </div>
+        <div  class="opciones_menu"><img src="/public/assets/Imagenes/iconos/llamada.png" alt="" style="width: 50px; margin-right: 10px;margin-left: 10px;"> <h3>Contacto Admin</h3> </div>
     
     </div>
 
