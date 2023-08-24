@@ -1,4 +1,3 @@
-export default Empresas;
 
 
 const Empresas = [
@@ -340,15 +339,7 @@ const Empresas = [
             "descripcion": "Agendas con diseños",
             "imagen_producto": "/public/assets/Imagenes/13.jpg"
           },
-          {
-            "precio": 40,
-            "unidades_disponibles": 200,
-            "unidades_vendidas": 100,
-            "id_producto": "WM003",
-            "nombre_producto": "lápices",
-            "descripcion": "Lápices de colores",
-            "imagen_producto": "/public/assets/Imagenes/19.jpg"
-          }
+
         ]
       }    
 ];

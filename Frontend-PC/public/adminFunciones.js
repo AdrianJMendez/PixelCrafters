@@ -74,7 +74,7 @@ function abrirInfoOP(){
 
     for (let i = 1; i <= 39; i++) {
         document.getElementById('tablas-infopro').innerHTML+=`
-        <img class="img-pro" src="assets/Imagenes/${i}.jpg" alt="">
+        <img class="img-pro" src="/public/assets/Imagenes/${i}.jpg" alt="">
         `;
     }
 
