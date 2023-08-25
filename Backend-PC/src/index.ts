@@ -3,6 +3,7 @@ import cors from 'cors';
 import userRouter from './routers/usuarios.router';
 import empresaRouter from './routers/empresas.router';
 import productosRouter from './routers/productos.router';
+import adminRouter from './routers/admins.router';
 
 //Inicializacios
 const app = express();
@@ -21,7 +22,7 @@ app.use(cors());
 app.use('/usuarios', userRouter);
 app.use('/empresas', empresaRouter);
 app.use('/productos', productosRouter);
-
+app.use('/administrador', adminRouter);
 
 //levantar el servidor
 app.listen(app.get('port'), () => {
