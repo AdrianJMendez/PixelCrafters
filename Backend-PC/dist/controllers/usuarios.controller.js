@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AgregarProducto = exports.register = exports.login = void 0;
+exports.ObtenerUsuario = exports.AgregarProducto = exports.register = exports.login = void 0;
 const usuario_schema_1 = require("../models/usuario.schema");
 const productos_schema_1 = require("../models/productos.schema");
 // login
@@ -80,3 +80,13 @@ const AgregarProducto = (req, res) => __awaiter(void 0, void 0, void 0, function
     }
 });
 exports.AgregarProducto = AgregarProducto;
+const ObtenerUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const usuario = yield usuario_schema_1.UsuarioSchema.findById(req.params.id, { contraseña: false });
+    if (usuario) {
+        res.send({ status: true, message: 'usuario obtenido con exito', usuario });
+    }
+    else
+        res.send({ status: false, message: 'usuario no existe' });
+    res.end();
+});
+exports.ObtenerUsuario = ObtenerUsuario;

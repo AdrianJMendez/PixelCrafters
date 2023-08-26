@@ -1,5 +1,5 @@
 import express from 'express';
-import { ObtenerProductos } from '../controllers/productos.controller';
+import { ObtenerProducto, ObtenerProductos } from '../controllers/productos.controller';
 
 
 const router = express.Router();
@@ -8,7 +8,7 @@ const router = express.Router();
 // http://localhost:3000/empresa
 router.get('',ObtenerProductos)
 
-
+router.get('/:id',ObtenerProducto);
 
 
 

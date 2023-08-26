@@ -2,7 +2,6 @@ import {Request, Response} from 'express';
 import { AdminSchema } from '../models/admins.schema';
 
 
-
 // login
 export const login = async (req: Request, res: Response) => {
 

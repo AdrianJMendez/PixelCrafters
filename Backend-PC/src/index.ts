@@ -25,6 +25,7 @@ app.use('/usuarios', userRouter);
 app.use('/empresas', empresaRouter);
 app.use('/productos', productosRouter);
 app.use('/ordenes',ordenesRouter);
+app.use('/administrador', adminRouter)
 
 
 //levantar el servidor

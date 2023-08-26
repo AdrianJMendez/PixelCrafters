@@ -9,4 +9,6 @@ const router = express_1.default.Router();
 //login
 // http://localhost:3000/Motoristas/login
 router.get('/', orden_controllers_1.obtenerallordenes);
+router.get('/:id', orden_controllers_1.obtenerunaorden);
+router.post('/add', orden_controllers_1.agregarOrden);
 exports.default = router;

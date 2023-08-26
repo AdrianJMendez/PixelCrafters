@@ -1,5 +1,5 @@
 import express from 'express';
-import { AgregarProducto, login, register } from '../controllers/usuarios.controller';
+import { AgregarProducto, ObtenerUsuario, login, register } from '../controllers/usuarios.controller';
 
 const router = express.Router();
 
@@ -14,5 +14,6 @@ router.post('/register', register);
 //agregar productos al carrito
 router.post("/:id", AgregarProducto);
 
+router.get("/:id", ObtenerUsuario);
 
 export default router;

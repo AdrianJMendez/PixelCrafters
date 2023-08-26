@@ -9,4 +9,5 @@ const router = express_1.default.Router();
 //obtener empresas
 // http://localhost:3000/empresa
 router.get('', productos_controller_1.ObtenerProductos);
+router.get('/:id', productos_controller_1.ObtenerProducto);
 exports.default = router;

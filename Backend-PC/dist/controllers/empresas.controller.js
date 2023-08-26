@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ObtenerEmpresa = exports.ObtenerEmpresas = void 0;
 const empresas_schema_1 = require("../models/empresas.schema");
 const ObtenerEmpresas = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const empresa = yield empresas_schema_1.EmpresaSchema.find({}, { categoria: 1, nombre: 1, imagen: 1, _id: 1 });
-    if (empresa.length > 0) {
-        res.send({ status: true, message: 'Empresas obtenidas con exito', empresa });
+    const empresas = yield empresas_schema_1.EmpresaSchema.find({}, {});
+    if (empresas.length > 0) {
+        res.send({ status: true, message: 'Empresas obtenidas con exito', empresas });
     }
     else {
         res.send({ status: false, message: 'Empresas no existen' });

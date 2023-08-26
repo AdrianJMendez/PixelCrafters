@@ -313,6 +313,59 @@ footer{
     overflow: hidden;
 }
 
+
+#carrito{
+    width: 100%;
+    height:700px;
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+#carritocp{
+    height: 100%;
+    overflow: scroll;
+    padding-top: 70px;
+
+
+}
+
+.nvoPedido{
+    border: none;
+    border-bottom:  #FFB84E 2px dotted;
+    height: fit-content;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: auto;
+    color: black;
+    text-align: justify;
+    background-color: #d9d9d9;
+    margin-bottom: 20px;
+}
+
+.nvoPedido:hover{
+    background-color: #939292;
+}
+
+.nvoPedido div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.nvoPedido img{
+    height: 90px;
+    width: 90px;
+    border-radius: 60px;
+}
+
 #paginaP img{
     margin: 30px;
     width: 450px;
@@ -340,4 +393,20 @@ footer{
     border: none;
     background-color: #23A566;
     border-radius: 15px;
+}
+
+.btn_comienza{
+    height: 40px;
+    width: 100px;
+    margin: 20px;
+    background: none;
+    color: white;
+    border: #FFB84E 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    background-color: #4A48BB;
+    border-radius: 10px;
 }

@@ -79,3 +79,13 @@ export const AgregarProducto = async (req: Request, res: Response) => {
 
 
 };
+
+export const ObtenerUsuario = async (req: Request, res: Response) => {
+  const usuario = await UsuarioSchema.findById(req.params.id, { contraseña:false});
+    if (usuario) {
+      res.send({status: true, message: 'usuario obtenido con exito', usuario});
+    }
+    else 
+      res.send({status: false, message: 'usuario no existe'});
+    res.end();
+}

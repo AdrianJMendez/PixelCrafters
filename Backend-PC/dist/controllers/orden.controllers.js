@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.obtenermotorista = exports.obtenerallordenes = void 0;
+exports.agregarOrden = exports.obtenerunaorden = exports.obtenerallordenes = void 0;
 const orden_schema_1 = require("../models/orden.schema");
 const obtenerallordenes = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -25,7 +25,7 @@ const obtenerallordenes = function (req, res) {
     });
 };
 exports.obtenerallordenes = obtenerallordenes;
-const obtenermotorista = function (req, res) {
+const obtenerunaorden = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const moto = yield orden_schema_1.ordenSchema.find({ _id: req.params.id });
@@ -38,4 +38,30 @@ const obtenermotorista = function (req, res) {
         }
     });
 };
-exports.obtenermotorista = obtenermotorista;
+exports.obtenerunaorden = obtenerunaorden;
+const agregarOrden = function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const nvoOrden = {
+            Productos: req.body.productos,
+            Estado: false,
+            idRemitente: req.body._id,
+        };
+        try {
+            const orden = new orden_schema_1.ordenSchema(nvoOrden);
+            yield orden.save();
+            res.send({
+                status: true,
+                message: 'Orden agregada con exito',
+                orden
+            });
+        }
+        catch (error) {
+            res.status(500).send({
+                status: false,
+                message: 'Error al agregar la orden',
+                error
+            });
+        }
+    });
+};
+exports.agregarOrden = agregarOrden;

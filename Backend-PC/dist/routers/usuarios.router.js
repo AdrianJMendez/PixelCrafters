@@ -14,4 +14,5 @@ router.post('/login', usuarios_controller_1.login);
 router.post('/register', usuarios_controller_1.register);
 //agregar productos al carrito
 router.post("/:id", usuarios_controller_1.AgregarProducto);
+router.get("/:id", usuarios_controller_1.ObtenerUsuario);
 exports.default = router;

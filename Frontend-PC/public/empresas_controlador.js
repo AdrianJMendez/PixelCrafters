@@ -354,6 +354,7 @@ function landing(){
   document.getElementById('empresas').style.display="none"
   document.getElementById('productos').style.display="none";
   document.getElementById('paginaP').style.display="none";
+  document.getElementById('carrito').style.display="none"
   document.querySelector('header').innerHTML=`<img src="/public/assets/Imagenes/Logo (3).png" onclick="landing()"> 
   <h3 onclick="landing()">Pixel Crafters</h3>
   <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>`;
@@ -366,29 +367,12 @@ function abrirEmpresas(categoria){
   document.getElementById('carrusel').style.display="none";
   document.getElementById('productos').style.display="none";
   document.getElementById('paginaP').style.display="none";
+  document.getElementById('carrito').style.display="none"
   //mostrar elementos
   document.getElementById('empresas').style.display="flex"
   generarEmpresas(categoria);
 };
 
-
-function decrement(event) {
-  const countValue = document.querySelector(".count-value");
-  let count = parseInt(countValue.textContent);
-  if (count > 0) {
-    count--;
-    countValue.textContent = count;
-  }
-  event.stopPropagation(); // Detener la propagación del evento de clic
-}
-
-function increment(event) {
-  const countValue = document.querySelector(".count-value");
-  let count = parseInt(countValue.textContent);
-  count++;
-  countValue.textContent = count;
-  event.stopPropagation(); // Detener la propagación del evento de clic
-}
 
 function abrirPersonalizacion(){
   //ocultando los elementos innecesarios
@@ -397,9 +381,25 @@ function abrirPersonalizacion(){
   document.getElementById('carrusel').style.display="none";
   document.getElementById('productos').style.display="none";
   document.getElementById('empresas').style.display="none";
+  document.getElementById('carrito').style.display="none"
   //mostrar elementos
   document.getElementById('paginaP').style.display="flex"
 
+};
+
+
+function abrirCarrito(){
+  //ocultando los elementos innecesarios
+  document.getElementById('Categorias').style.display="none";
+  document.getElementById('info_landing').style.display="none";
+  document.getElementById('carrusel').style.display="none";
+  document.getElementById('productos').style.display="none";
+  document.getElementById('empresas').style.display="none";
+  document.getElementById('paginaP').style.display="none"
+  //mostrar elementos
+  document.getElementById('carrito').style.display="flex"
+
+  renderizarCarrito();
 };
 
 //funciones de logica del sitio
@@ -409,7 +409,7 @@ function generarEmpresas(categoria){
   //cambiamos el header
   document.querySelector('header').innerHTML=`<img src="/public/assets/Imagenes/Logo (3).png" onclick="landing()"> 
   <h3 onclick="landing()">Pixel Crafters</h3>
-  <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl" style="color: #fafafa;"></i>`;
+  <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl" style="color: #fafafa;" onclick="abrirCarrito()"></i>`;
   //limpiamos el contenido
   document.getElementById('empresas').innerHTML='';
 
@@ -524,5 +524,45 @@ console.log(response);
 }
 
 
+function renderizarCarrito(){
+
+  const usuarioJSON = localStorage.getItem("usuario");
+  const usuario = JSON.parse(usuarioJSON);
+  fetch(`http://localhost:3000/usuarios/${usuario._id}`).then(response => response.json())
+  .then(data => {
+    if (data.status) {
+      const usuario = data.usuario; 
+      const metodoPago = usuario.metodo_de_pagos;
+      const carrito = usuario.carrito_de_productos;
+      localStorage.setItem('carrito', JSON.stringify(carrito))
+      const opcionesHTML = carrito.map(producto => {
+        document.getElementById('carritocp').innerHTML+=`
+        <div class="nvoPedido">
+              <div> <img src="${producto.imagen_producto}" alt=""></div>
+              <div>
+                  <h6>Nombre: ${producto.nombre_producto}</h6>
+                  <h6>Cantidad: (1)</h6>
+                  <h6>Monto total: 1*(${producto.precio}Lps.)</h6>
+                  <h6>Metodo de pago: ${metodoPago}</h6>
+              </div>
+            </div><br>
+        `;
+      });
 
 
+     
+    } else {
+      console.log('No se encontraron productos:', data.message);
+    }
+  });
+
+}
+
+function pagar(){
+  const carritoJSON = localStorage.getItem("carrito");
+  const carrito = JSON.parse(carritoJSON);
+
+  
+
+
+}

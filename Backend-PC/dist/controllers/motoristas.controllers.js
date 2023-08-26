@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.guardarmotorista = exports.loginM = void 0;
+exports.registerM = exports.login = exports.guardarmotorista = exports.loginM = void 0;
 const motorista_schema_1 = require("../models/motorista.schema");
 const loginM = (req, res) => {
 };
@@ -47,3 +47,38 @@ const guardarmotorista = function (req, res) {
     });
 };
 exports.guardarmotorista = guardarmotorista;
+const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const motorista = yield motorista_schema_1.motoristaSchema.findOne({ email: req.body.email, contraseña: req.body.contraseña }, { _id: true, nombre: true });
+    if (motorista) {
+        res.send({ status: true, message: 'Login correcto', motorista });
+    }
+    else
+        res.send({ status: false, message: 'Login incorrecto' });
+    res.end();
+});
+exports.login = login;
+// register
+const registerM = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const nvomotorista = {
+        nombre: req.body.nombre,
+        email: req.body.email,
+        contraseña: req.body.contraseña,
+    };
+    try {
+        const motorista = new motorista_schema_1.motoristaSchema(nvomotorista);
+        yield motorista.save();
+        res.send({
+            status: true,
+            message: 'motorista agregado con exito',
+            motorista
+        });
+    }
+    catch (error) {
+        res.status(500).send({
+            status: false,
+            message: 'Error al agregar el motorista',
+            error
+        });
+    }
+});
+exports.registerM = registerM;
