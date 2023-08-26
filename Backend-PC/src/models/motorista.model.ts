@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Producto } from './productos.model';
+
 import { Orden } from './orden.model';
 
 
@@ -9,8 +9,8 @@ export interface Motorista {
     nombre: string;
     email: string;
     contraseña: string;
-    estado:boolean;
-    Ordenes: Array<Orden>;
-    Historialordenes: Array<Object>;
+    estado?:boolean;
+    Ordenes?: Array<Orden>;
+    Historialordenes?: Array<Object>;
   }
 
