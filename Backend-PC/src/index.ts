@@ -3,7 +3,8 @@ import cors from 'cors';
 import userRouter from './routers/usuarios.router';
 import empresaRouter from './routers/empresas.router';
 import productosRouter from './routers/productos.router';
-
+import motoristasRouter from './routers/motoristas.routers';
+import ordenesRouter from './routers/ordenes.routers'
 //Inicializacios
 const app = express();
 import './utilis/database'
@@ -21,6 +22,8 @@ app.use(cors());
 app.use('/usuarios', userRouter);
 app.use('/empresas', empresaRouter);
 app.use('/productos', productosRouter);
+app.use('/motoritas',motoristasRouter);
+app.use('/ordenes',ordenesRouter);
 
 
 //levantar el servidor
