@@ -29,7 +29,7 @@
                 <button class="btn-admin container-fluid btnadmin-active" onclick="abrirLadmin()">ESTADISTICAS</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoO()">ORDENES</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoM()">MOTORISTAS</button>
-                <button class="btn-admin container-fluid" onclick="abrirInfoE()">EMPRESAS</button>
+                <button class="btn-admin container-fluid" onclick="abrirInfoE(); obtenerEmpresas();">EMPRESAS</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoOP()">PRODUCTOS</button>
             </div>
               
@@ -212,8 +212,8 @@
         <!-- Info Empresas -->
         <div id="Empresas" class="container-fluid">
             <h1 class="texto-bonito">EMPRESAS</h1>
-            <div id="tablas-info">
-                <div class="info-empresa">
+            <div id="tablas-emp">
+                <div class="info-empresa" id="panelempresas">
                     <div class="parent-infoe">
                         <div class="div-e1"> 
                             <img src="/public/assets/Imagenes/Empresa5.png" alt="" >
@@ -227,34 +227,16 @@
                             <h4>Productos</h4>
                         </div>
                         <div class="div-e3">
-                            <h5>Vendidos</h5>
                             <div class="pre-productos">
                                 <div class="each-pro">
-                                    <img src="/public/assets/Imagenes/33.jpg" alt="">
-                                    <br>
-                                    <h11>Unidades</h11>
-                                    <br>
-                                    <h11>Vendidos</h11>
-                                    <br>
-                                    <h11>Recaudado</h11>
-                                    <br>
-                                    <h11>Mas Informacion</h11>
+                                    <img src="/public/assets/Imagenes/33.jpg" alt="">                                   
                                 </div>
                             </div>
                         </div>
                         <div class="div-e4"> 
-                            <h5>Disponibles</h5>
                             <div id="" class="pre-productos">
                                 <div class="each-pro">
-                                    <img src="/public/assets/Imagenes/33.jpg" alt="">
-                                    <br>
-                                    <h11>Unidades</h11>
-                                    <br>
-                                    <h11>Vendidos</h11>
-                                    <br>
-                                    <h11>Recaudado</h11>
-                                    <br>
-                                    <h11>Mas Informacion</h11>
+                                    <img src="/public/assets/Imagenes/33.jpg" alt="">                               
                                 </div>
                             </div>
                         </div>

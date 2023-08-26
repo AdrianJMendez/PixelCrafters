@@ -8,7 +8,6 @@ const rutasU_1 = __importDefault(require("./routes/rutasU"));
 const path_1 = __importDefault(require("path"));
 //Inicializacion
 const app = (0, express_1.default)();
-require("./database");
 //settings
 app.set('port', process.env.PORT || 8000); //process.env.PORT puerte de la nube
 //midleweares

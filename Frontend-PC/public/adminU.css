@@ -37,7 +37,8 @@ header img{
     background: url(/public/assets/UI/5.png);
     background-size: cover;
     width: 100%;
-    height: 1500px;
+    min-height: 1500px;
+    height: 100%;
     display: flex;
     color: white;
     text-align: center;
@@ -208,6 +209,27 @@ header img{
     align-items: center;
 }
 
+#tablas-emp{
+    height: auto;
+    max-height: 600px;
+    width: 100%;
+    border: #FFB84E 3px solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: #FFFFFF ;
+    overflow: hidden;
+    overflow: auto;
+    
+}
+
+#tablas-emp > div {
+    display: inline-block; /* Elementos dentro del contenedor en línea */
+    vertical-align: middle; /* Alineación vertical al centro */
+    width: auto; /* O ajusta según tus necesidades */
+    margin: 10px; /* Ajusta el margen según tus necesidades */
+}
+
+
 #Empresas{
     height: 100%;
     width: 100%;
@@ -223,6 +245,7 @@ header img{
 .info-empresa{
     background-color: #d9d9d9;
     height: 500px;
+    min-width: 500px;
     width: 90%;
     border: #FFB84E 3px solid;
     border-radius: 20px;

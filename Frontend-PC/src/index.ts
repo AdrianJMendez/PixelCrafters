@@ -4,7 +4,7 @@ import path from 'path';
 
 //Inicializacion
 const app = express();
-import './database';
+
 
 //settings
 app.set('port', process.env.PORT || 8000); //process.env.PORT puerte de la nube

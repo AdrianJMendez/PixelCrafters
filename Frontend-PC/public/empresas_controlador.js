@@ -412,54 +412,117 @@ function generarEmpresas(categoria){
   <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl" style="color: #fafafa;"></i>`;
   //limpiamos el contenido
   document.getElementById('empresas').innerHTML='';
-  Empresas.forEach((empresa) => {
 
-    if (empresa.categoria === categoria) {
-      // Si coincide, la renderizamos
-      document.getElementById('empresas').innerHTML+=`<div class="caratulas" onclick="generarProductos('${empresa.nombre}')">
-      <img src="${empresa.imagen}" alt="">
-      </div>`;
+  fetch('http://localhost:3000/empresas')
+  .then(response => response.json())
+  .then(data => {
+    if (data.status) {
+      const empresas = data.empresas;  
+      const opcionesHTML = empresas.map(empresa => {
+        if (empresa.categoria === categoria) {
+          // Si coincide, la renderizamos
+          document.getElementById('empresas').innerHTML+=`<div class="caratulas" onclick="generarProductos('${empresa._id}')">
+         <img src="${empresa.imagen}" alt="">
+         </div>`;
+        }
+      });
+
+
+    } else {
+      console.log('No se encontraron empresas:', data.message);
     }
+  })
+  .catch(error => {
+    console.error('Error en la solicitud:', error);
   });
 
+  
 };
 
-function generarProductos(productos){
+function generarProductos(id){
   //ocultando los elementos innecesarios
   document.getElementById('empresas').style.display="none";
   //mostrar productos
   document.getElementById('productos').style.display="flex";
 
-  let empresa = Empresas.find((empresa)=>empresa.nombre===productos);
-  //limpiando el div
   document.getElementById('productos').innerHTML='';
 
-  empresa.productos.forEach((producto)=>{
-
-    document.getElementById('productos').innerHTML+=`  <div class="productosimg">
+  fetch(`http://localhost:3000/empresas/${id}`).then(response => response.json())
+  .then(data => {
+    if (data.status) {
+      const empresa = data.empresa; 
+      const productos = empresa.productos 
+      const opcionesHTML = productos.map(producto => {
+        document.getElementById('productos').innerHTML+=`  <div class="productosimg">
     <img src="${producto.imagen_producto}" alt="" > 
   </div>
   <div class="dropdown-center">
-    <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="productoActual('${producto._id}')">
       Detalles
     </button>
     <ul class="dropdown-menu menu-compras">
       <div class="centered-content">
         <h7>${producto.nombre_producto}</h7><br>
         <h10>${producto.descripcion}</h10><br>
-        <div class="counter">
-          <!-- Agrega los atributos onclick a los botones y detén la propagación del evento de clic -->
-          <button class="btn btn-count" data-action="decrement" onclick="decrement(event)">-</button>
-          <span class="count-value">0</span>
-          <button class="btn btn-count" data-action="increment" onclick="increment(event)">+</button>
-        </div>
-        <button class="btn_p">GUARDAR</button>
-        <button class="btn_p" onclick="abrirPersonalizacion()" >PERSONALIZAR</button>
+       <button class="btn_p" onclick="guardarEnCarrito()">GUARDAR</button>
+       <button class="btn_p" onclick="abrirPersonalizacion()" >PERSONALIZAR</button>
       </div>
     </ul>
   </div>`;
+      });
 
-
-  })
+    } else {
+      console.log('No se encontraron productos:', data.message);
+    }
+  });
+  
  
 };
+
+function productoActual(id) {
+  fetch(`http://localhost:3000/productos/${id}`).then(response => response.json())
+  .then(data => {
+    if (data.status) {
+      const producto = JSON.stringify(data.producto);
+      localStorage.setItem("producto", producto); 
+    } else {
+      console.log('No se encontraron productos:', data.message);
+    }
+  });
+}
+
+async function guardarEnCarrito(){
+
+const usuarioJSON = localStorage.getItem("usuario");
+const usuario = JSON.parse(usuarioJSON);
+console.log(usuario._id)
+
+const productoJSON = localStorage.getItem("producto");
+const producto = JSON.parse(productoJSON);
+
+const payload = {
+  _id:producto._id,
+  precio:producto.precio,
+  nombre_producto:producto.nombre_producto,
+  descripcion:producto.descripcion,
+  imagen_producto:producto.imagen_producto
+}
+
+const result = await fetch(`http://localhost:3000/usuarios/${usuario._id}`, {
+  headers: {'Content-type': 'application/json'},
+  body: JSON.stringify(payload),
+  method: 'POST'
+});
+const response = await result.json();
+if (!response || !response.status) {
+  alert("fallo al agregar producto");
+} else {
+  alert("Nuevo producto agregado al carrito");
+}
+console.log(response);
+
+}
+
+
+
+

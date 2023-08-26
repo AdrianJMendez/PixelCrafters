@@ -78,3 +78,20 @@ body{
     font-family: 'MiFuente'; /* Nombre de la fuente personalizada */
     src: url('assets/UI/pixelation/Pixelation.ttf') format('truetype'); /* Ruta al archivo de la fuente */
   }
+
+
+  #btn_comienza{
+    height: 40px;
+    width: 210px;
+    margin: 20px;
+    background: none;
+    color: white;
+    border: #FFB84E 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+    background-color: #4A48BB;
+    border-radius: 10px;
+}
