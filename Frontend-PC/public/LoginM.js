@@ -1,7 +1,7 @@
 const login = async () => {
     const payload = {
-      motorista: document.getElementById('Usuario').value,
-      contraseña: document.getElementById('Constraseña').value,
+      nombre: document.getElementById('nombre').value,
+      contraseña: document.getElementById('Contraseña').value,
 
     }
     console.log("Login", payload);
@@ -19,4 +19,5 @@ const login = async () => {
       window.location.href = 'http://localhost:8000/driver';
     }
     console.log(response);
+
   };

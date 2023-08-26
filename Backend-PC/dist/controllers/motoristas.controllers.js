@@ -45,7 +45,7 @@ const guardarmotorista = function (req, res) {
 };
 exports.guardarmotorista = guardarmotorista;
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const motorista = yield motorista_schema_1.motoristaSchema.findOne({ Usuario: req.body.Usuario, contraseña: req.body.contraseña }, { _id: true, nombre: true });
+    const motorista = yield motorista_schema_1.motoristaSchema.findOne({ nombre: req.body.nombre, contraseña: req.body.contraseña }, { _id: true, nombre: true });
     if (motorista) {
         res.send({ status: true, message: 'Login correcto', motorista });
     }

@@ -1,11 +1,13 @@
+const UsuarioAlmacenado = JSON.parse(localStorage.getItem("motorista"));
+const nombreM = UsuarioAlmacenado.nombre;
 function generarcontenido(){
 document.getElementById('cuerpo').innerHTML+=`
 
 
 <div class="fondoR">
 <div class="contenido_pag1 "onclick=""  id="contendor_1"> 
-<h3>Bienvenido</h3>
-<h3>Nombre del motorista</h3>
+<h3>Hola</h3>
+<h3>${nombreM}</h3>
 </div>
 <div class="contenido_pag1" onclick="generarPD()"id="contendor_2">
 <h5>Pedidos Disponibles</h5>

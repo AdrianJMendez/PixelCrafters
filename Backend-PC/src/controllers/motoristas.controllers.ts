@@ -47,7 +47,7 @@ export const guardarmotorista = async function (req: Request, res: Response) {
   };
   export const login = async (req: Request, res: Response) => {
 
-    const motorista = await motoristaSchema.findOne({Usuario: req.body.Usuario, contraseña: req.body.contraseña}, {_id: true, nombre: true});
+    const motorista = await motoristaSchema.findOne({nombre: req.body.nombre, contraseña: req.body.contraseña},{_id:true,nombre:true});
     if (motorista) {
       res.send({status: true, message: 'Login correcto', motorista});
     }
