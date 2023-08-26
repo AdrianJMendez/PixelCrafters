@@ -9,6 +9,7 @@ const router = express.Router();
 router.post('/login',loginM );
 router.post('registro',registerM);
 router.post('/agregar',guardarmotorista);
+router.get("",obtenerMotoristas)
 
 
 

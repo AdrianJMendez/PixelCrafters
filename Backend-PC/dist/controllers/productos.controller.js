@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ObtenerProducto = exports.ObtenerProductos = void 0;
 const productos_schema_1 = require("../models/productos.schema");
 const ObtenerProductos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const productos = yield productos_schema_1.ProductoSchema.find({}, { unidades_disponibles: false, unidades_vendidas: false });
+    const productos = yield productos_schema_1.ProductoSchema.find({}, { unidades_disponibles: false });
     if (productos.length > 0) {
         res.send({ status: true, message: 'productos obtenidas con exito', productos });
     }

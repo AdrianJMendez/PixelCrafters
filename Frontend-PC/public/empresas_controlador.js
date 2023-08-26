@@ -525,7 +525,7 @@ console.log(response);
 
 
 function renderizarCarrito(){
-
+  document.getElementById('carritocp').innerHTML=``;
   const usuarioJSON = localStorage.getItem("usuario");
   const usuario = JSON.parse(usuarioJSON);
   fetch(`http://localhost:3000/usuarios/${usuario._id}`).then(response => response.json())
@@ -558,11 +558,82 @@ function renderizarCarrito(){
 
 }
 
-function pagar(){
+async function pagar(){
+  console.log('pago iniciado')
   const carritoJSON = localStorage.getItem("carrito");
   const carrito = JSON.parse(carritoJSON);
 
+  const usuarioJSON = localStorage.getItem("usuario");
+  const usuario = JSON.parse(usuarioJSON);
+
+  
+    const payload = {
+      productos: carrito,
+      _id: usuario._id,
+
+    }
+    console.log("Login", payload);
+    const result = await fetch('http://localhost:3000/ordenes/add', {
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify(payload),
+      method: 'POST'
+    });
+    const response = await result.json();
+    if (!response || !response.status) {
+      alert("fallo al crear nueva orden");
+    } else {
+      alert("nueva orden creada");
+    }
+    console.log(response);
   
 
 
+}
+
+function generarotros(otro) {
+  if (otro != null) {
+    // Ocultar los elementos innecesarios
+    document.getElementById('Categorias').style.display = "none";
+    document.getElementById('info_landing').style.display = "none";
+    document.getElementById('carrusel').style.display = "none";
+    document.getElementById('empresas').style.display = "none";
+    document.getElementById('paginaP').style.display = "none";
+    document.getElementById('carrito').style.display = "none";
+
+    // Mostrar elementos
+    document.getElementById('productos').style.display = "flex";
+
+    fetch(`http://localhost:3000/productos`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.status) {
+          const productos = data.productos;
+          const opcionesHTML = productos.map(producto => {
+            if (otro <= producto.unidades_vendidas) {
+              console.log(producto.unidades_vendidas);
+              document.getElementById('productos').innerHTML += `<div class="productosimg">
+              <img src="${producto.imagen_producto}" alt=""> 
+            </div>
+            <div class="dropdown-center">
+              <button class="btn-detalles dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="productoActual('${producto._id}')">
+                Detalles
+              </button>
+              <ul class="dropdown-menu menu-compras">
+                <div class="centered-content">
+                  <h7>${producto.nombre_producto}</h7><br>
+                  <h10>${producto.descripcion}</h10><br>
+                  <button class="btn_p" onclick="guardarEnCarrito()">GUARDAR</button>
+                  <button class="btn_p" onclick="abrirPersonalizacion()">PERSONALIZAR</button>
+                </div>
+              </ul>
+            </div>`;
+            }
+          });
+        } else {
+          console.log('No se encontraron productos:', data.message);
+        }
+      });
+  } else {
+    alert('No hay productos');
+  }
 }
