@@ -10,6 +10,11 @@ router.get('/user/landing', (req: Request, res: Response) => {
 });
 
 router.get('/user/login', (req: Request, res: Response) => {
+    const filePath = path.join(__dirname, '../../../public', 'loginU.html'); // Ajusta la ruta
+    res.sendFile(filePath);
+});
+
+router.get('/user/registro', (req: Request, res: Response) => {
     const filePath = path.join(__dirname, '../../../public', 'registerU.html'); // Ajusta la ruta
     res.sendFile(filePath);
 });

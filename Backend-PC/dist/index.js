@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const usuarios_router_1 = __importDefault(require("./routers/usuarios.router"));
 const empresas_router_1 = __importDefault(require("./routers/empresas.router"));
 const productos_router_1 = __importDefault(require("./routers/productos.router"));
+const admins_router_1 = __importDefault(require("./routers/admins.router"));
 //Inicializacios
 const app = (0, express_1.default)();
 require("./utilis/database");
@@ -21,6 +22,7 @@ app.use((0, cors_1.default)());
 app.use('/usuarios', usuarios_router_1.default);
 app.use('/empresas', empresas_router_1.default);
 app.use('/productos', productos_router_1.default);
+app.use('/administrador', admins_router_1.default);
 //levantar el servidor
 app.listen(app.get('port'), () => {
     console.log(`se levantó el servidor en el puerto: ${app.get('port')}`);

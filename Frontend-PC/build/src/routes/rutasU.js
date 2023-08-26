@@ -12,6 +12,10 @@ router.get('/user/landing', (req, res) => {
     res.sendFile(filePath);
 });
 router.get('/user/login', (req, res) => {
+    const filePath = path_1.default.join(__dirname, '../../../public', 'loginU.html'); // Ajusta la ruta
+    res.sendFile(filePath);
+});
+router.get('/user/registro', (req, res) => {
     const filePath = path_1.default.join(__dirname, '../../../public', 'registerU.html'); // Ajusta la ruta
     res.sendFile(filePath);
 });
