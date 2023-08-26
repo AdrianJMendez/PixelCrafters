@@ -9,11 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.registerM = exports.login = exports.guardarmotorista = exports.loginM = void 0;
+exports.ObtenerallMotoristas = exports.registerM = exports.login = exports.guardarmotorista = void 0;
 const motorista_schema_1 = require("../models/motorista.schema");
-const loginM = (req, res) => {
-};
-exports.loginM = loginM;
 const guardarmotorista = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const Motorista = new motorista_schema_1.motoristaSchema({
@@ -48,7 +45,7 @@ const guardarmotorista = function (req, res) {
 };
 exports.guardarmotorista = guardarmotorista;
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const motorista = yield motorista_schema_1.motoristaSchema.findOne({ email: req.body.email, contraseña: req.body.contraseña }, { _id: true, nombre: true });
+    const motorista = yield motorista_schema_1.motoristaSchema.findOne({ Usuario: req.body.Usuario, contraseña: req.body.contraseña }, { _id: true, nombre: true });
     if (motorista) {
         res.send({ status: true, message: 'Login correcto', motorista });
     }
@@ -82,3 +79,17 @@ const registerM = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.registerM = registerM;
+const ObtenerallMotoristas = function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const allmotoristas = yield motorista_schema_1.motoristaSchema.find();
+            res.send(allmotoristas);
+            res.end();
+        }
+        catch (error) {
+            console.error('Error al obtener los motoristas:', error);
+            res.status(500).send('Ocurrió un error al obtener los Motoristas.');
+        }
+    });
+};
+exports.ObtenerallMotoristas = ObtenerallMotoristas;

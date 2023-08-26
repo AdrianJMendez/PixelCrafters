@@ -32,7 +32,7 @@ router.get('/admin/landing', (req: Request, res: Response) => {
 
 
 //ruta de los motoristas
-router.get('/driver/register', (req: Request, res: Response) => {
+router.get('/driver/login', (req: Request, res: Response) => {
     const filePath = path.join(__dirname, '../../../public', 'Login_M.html'); // Ajusta la ruta
     res.sendFile(filePath);
 });
