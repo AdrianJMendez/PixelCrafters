@@ -10,7 +10,7 @@ router.get('/',ObtenerallMotoristas);
 router.post('/login',login );
 router.post('registro',registerM);
 router.post('/agregar',guardarmotorista);
-router.get("",obtenerMotoristas)
+
 
 
 
