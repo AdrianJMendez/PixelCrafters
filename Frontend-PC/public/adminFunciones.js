@@ -120,7 +120,7 @@ function cambiarNombre(){
             <div id="bton">
                 <button class="btn-admin container-fluid btnadmin-active" onclick="abrirLadmin()">ESTADISTICAS</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoO()">ORDENES</button>
-                <button class="btn-admin container-fluid" onclick="abrirInfoM()">MOTORISTAS</button>
+                <button class="btn-admin container-fluid" onclick="abrirInfoM(); obtenerMotoristas()">MOTORISTAS</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoE(); obtenerEmpresas();">EMPRESAS</button>
                 <button class="btn-admin container-fluid" onclick="abrirInfoOP()">PRODUCTOS</button>
             </div>
@@ -170,6 +170,47 @@ function obtenerEmpresas() {
   
         } else {
           console.log('No se encontraron empresas:', data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error en la solicitud:', error);
+      });
+  }
+  
+  function obtenerMotoristas() {
+    document.getElementById('motoif').innerHTML="<tr><th>Foto</th><th>Nombre</th><th>ID</th><th>Email</th><th>Estado</th></tr>";
+    fetch('http://localhost:3000/motoristas/')
+      .then(response => response.json())
+      .then(data => {
+        if (data!=null) {
+          const motoristas = data; // Asegúrate de usar la propiedad correcta
+          motoristas.forEach(motorista => {
+            if(motorista.estado){
+              document.getElementById('motoif').innerHTML += `
+              <tr>
+                  <td><img src="/public/assets/UI/8.svg" alt="Foto 1"></td>
+                  <td>${motorista.nombre}</td>
+                  <td>${motorista._id}</td>
+                  <td>${motorista.email}</td>
+                  <td><i class="fa-regular fa-circle-check fa-lg" style="color: #05ff22;"></i></td>
+                </tr>
+              `;}else{
+                document.getElementById('motoif').innerHTML += `
+                <tr>
+                    <td><img src="/public/assets/UI/8.svg" alt="Foto 1"></td>
+                    <td>${motorista.nombre}</td>
+                    <td>${motorista._id}</td>
+                    <td>${motorista.email}</td>
+                    <td><i class="fa-solid fa-circle-check fa-lg" style="color: #000000;"></i></td>
+                  </tr>
+                `;
+                
+              }
+
+
+          });
+        } else {
+          console.log('No se encontraron motoristas:', data.message);
         }
       })
       .catch(error => {
