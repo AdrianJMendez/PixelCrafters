@@ -1,12 +1,13 @@
 import express from 'express';
-import { guardarmotorista, loginM, registerM } from '../controllers/motoristas.controllers';
+import { ObtenerallMotoristas, guardarmotorista, login, registerM } from '../controllers/motoristas.controllers';
 
 
 const router = express.Router();
 
 //login
 // http://localhost:3000/Motoristas/login
-router.post('/login',loginM );
+router.get('/',ObtenerallMotoristas);
+router.post('/login',login );
 router.post('registro',registerM);
 router.post('/agregar',guardarmotorista);
 

@@ -8,7 +8,8 @@ const motoristas_controllers_1 = require("../controllers/motoristas.controllers"
 const router = express_1.default.Router();
 //login
 // http://localhost:3000/Motoristas/login
-router.post('/login', motoristas_controllers_1.loginM);
+router.get('/', motoristas_controllers_1.ObtenerallMotoristas);
+router.post('/login', motoristas_controllers_1.login);
 router.post('registro', motoristas_controllers_1.registerM);
 router.post('/agregar', motoristas_controllers_1.guardarmotorista);
 exports.default = router;

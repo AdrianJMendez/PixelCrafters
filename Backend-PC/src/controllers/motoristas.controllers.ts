@@ -1,11 +1,7 @@
 import { Request,Response } from "express"
 import { motoristaSchema } from "../models/motorista.schema";
 
-export const loginM=(req:Request,res:Response)=>{
 
-
-
-}
 export const guardarmotorista = async function (req: Request, res: Response) {
     const Motorista=new motoristaSchema({
         
@@ -51,7 +47,7 @@ export const guardarmotorista = async function (req: Request, res: Response) {
   };
   export const login = async (req: Request, res: Response) => {
 
-    const motorista = await motoristaSchema.findOne({email: req.body.email, contraseña: req.body.contraseña}, {_id: true, nombre: true});
+    const motorista = await motoristaSchema.findOne({Usuario: req.body.Usuario, contraseña: req.body.contraseña}, {_id: true, nombre: true});
     if (motorista) {
       res.send({status: true, message: 'Login correcto', motorista});
     }
@@ -90,3 +86,13 @@ export const guardarmotorista = async function (req: Request, res: Response) {
       });
     }
   };
+  export const ObtenerallMotoristas = async function (req: Request, res: Response) {
+    try {
+        const allmotoristas = await motoristaSchema.find();
+        res.send(allmotoristas);
+        res.end();
+    } catch (error) {
+        console.error('Error al obtener los motoristas:', error);
+        res.status(500).send('Ocurrió un error al obtener los Motoristas.');
+    }
+};
