@@ -84,96 +84,43 @@
 
         <!-- Visualizar Ordenes -->
         <div id="Ordenes">
-            <div id="tablas-info">
-                
-                <div class="nvoPedido">
-                    <div> <img src="/public/assets/Imagenes/26.jpg" alt=""></div>
-                    <div>
-                        <h6>Order #12990</h6><br>
-                        <h6>Usuario: Adrian_Mendez</h6><br>
-                        <h6>Email: esusjadrian@gmail.com</h6><br>
-                        
+            <div id="tablas-orden">
+                <div class="info-orden" id="">
+                    
+
                     </div>
-                    <div><h6>Order #12990</h6><br>
-                        <h6>Nombre:Taza_Ikea_450</h6><br>
-                        <h6>Cantidad: (2)</h6><br>
-                        <h6>Monto total: 2*(149.9Lps.)</h6><br>
-                        <h6>Metodo de pago: Visa</h6>
+                    <div class="nvoPedido">
+                        <div> <img src="/public/assets/Imagenes/26.jpg" alt=""></div>
+                        <div>
+                            <h6>Usuario: Adrian_Mendez</h6><br>
+                            <h6>Email: esusjadrian@gmail.com</h6><br>
+                            
+                        </div>
+                        <div><h6>Order #12990</h6><br>
+                            <h6>Nombre:Taza_Ikea_450</h6><br>
+                            <h6>Cantidad: (2)</h6><br>
+                            <h6>Monto total: 2*(149.9Lps.)</h6><br>
+                            <h6>Metodo de pago: Visa</h6>
+                        </div>
+                       
+    
                     </div>
                     <div>
                         <div class="dropdown-center">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                               Motoristas
                             </button>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" id="mActivos">
                               <li><a class="dropdown-item" href="#">Action</a></li>
                               <li><a class="dropdown-item" href="#">Action two</a></li>
                               <li><a class="dropdown-item" href="#">Action three</a></li>
                             </ul>
                           </div>
                     </div>
-
                 </div>
-                <div class="nvoPedido">
-                    <div> <img src="/public/assets/Imagenes/26.jpg" alt=""></div>
-                    <div>
-                        <h6>Order #12990</h6><br>
-                        <h6>Usuario: Adrian_Mendez</h6><br>
-                        <h6>Email: esusjadrian@gmail.com</h6><br>
-                        
-                    </div>
-                    <div><h6>Order #12990</h6><br>
-                        <h6>Nombre:Taza_Ikea_450</h6><br>
-                        <h6>Cantidad: (2)</h6><br>
-                        <h6>Monto total: 2*(149.9Lps.)</h6><br>
-                        <h6>Metodo de pago: Visa</h6>
-                    </div>
-                    <div>
-                        <div class="dropdown-center">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Motoristas
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Action two</a></li>
-                              <li><a class="dropdown-item" href="#">Action three</a></li>
-                            </ul>
-                          </div>
-                    </div>
-
-                </div>
-                <div class="nvoPedido">
-                    <div> <img src="/public/assets/Imagenes/26.jpg" alt=""></div>
-                    <div>
-                        <h6>Order #12990</h6><br>
-                        <h6>Usuario: Adrian_Mendez</h6><br>
-                        <h6>Email: esusjadrian@gmail.com</h6><br>
-                        
-                    </div>
-                    <div><h6>Order #12990</h6><br>
-                        <h6>Nombre:Taza_Ikea_450</h6><br>
-                        <h6>Cantidad: (2)</h6><br>
-                        <h6>Monto total: 2*(149.9Lps.)</h6><br>
-                        <h6>Metodo de pago: Visa</h6>
-                    </div>
-                    <div>
-                        <div class="dropdown-center">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Motoristas
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Action</a></li>
-                              <li><a class="dropdown-item" href="#">Action two</a></li>
-                              <li><a class="dropdown-item" href="#">Action three</a></li>
-                            </ul>
-                          </div>
-                    </div>
-
-                </div>
-
             </div>
 
-        </div>
+            
 
         <!-- Info Empresas -->
         <div id="Empresas" class="container-fluid">
@@ -235,8 +182,11 @@
                     <br>
                     <button class="administrar-productos-btn">Administrar Productos</button>
                     <div id="img-eadd">
-                        <i class="fa-regular fa-image fa-2xl"></i>
-                    </div>
+                        <label for="archivo" id="cargarimg">
+                            <img src="" >
+                            <i class="far fa-image fa-2x" ></i> 
+                            <input type="file" id="archivo" name="archivo" onchange="cambiarImagen(event)">
+                        </label>
                   </div>
                 </div>
               </div>

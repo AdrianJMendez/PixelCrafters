@@ -29,6 +29,7 @@ export const agregarOrden = async function(req:Request,res:Response){
         Productos:req.body.productos,
         Estado:false,
         idRemitente: req.body._id,
+        ubicacion:req.body.ubicacion
       };
     
       try {

@@ -9,6 +9,7 @@ const schema = new mongoose_1.default.Schema({
     Productos: (Array),
     Estado: Boolean,
     idRemitente: mongoose_1.default.Types.ObjectId,
-    idMotorista: mongoose_1.default.Types.ObjectId
+    idMotorista: mongoose_1.default.Types.ObjectId,
+    ubicacion: String
 });
 exports.ordenSchema = mongoose_1.default.model('ordenes', schema); // enlace

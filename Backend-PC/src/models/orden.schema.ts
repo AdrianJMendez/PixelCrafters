@@ -6,7 +6,8 @@ const schema = new mongoose.Schema<Orden>({
     Productos:Array<Producto>,
     Estado:Boolean,
     idRemitente: mongoose.Types.ObjectId,
-    idMotorista: mongoose.Types.ObjectId
+    idMotorista: mongoose.Types.ObjectId,
+    ubicacion: String
   });
   
   export const ordenSchema = mongoose.model('ordenes',schema);// enlace
