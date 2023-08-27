@@ -70,24 +70,7 @@ function abrirInfoOP(){
     document.getElementById('Ordenes').style.display='none';
     cambiarBtnActivo(4);
 
-    //renderizar los productos
-    document.getElementById('tablas-infopro').innerHTML='';
-
-    fetch('http://localhost:3000/productos').then(response => response.json())
-    .then(data => {
-      if (data.status) {
-        const productos = data.productos;  
-        const opcionesHTML = productos.map(producto => {
-          return `<img class="img-pro" src="${producto.imagen_producto}" alt="">`;
-        }).join('');
-  
-        document.getElementById('tablas-infopro').innerHTML = opcionesHTML;
-
-      } else {
-        console.log('No se encontraron productos:', data.message);
-      }
-    });
-
+    //renderizar los producto
 
 
 
@@ -343,3 +326,26 @@ const agregarEmpresa = async () => {
   }
   console.log(response);
 };
+
+
+function ObtenerProducto(){
+  document.getElementById('tablas-infopro').innerHTML='';
+
+    fetch('http://localhost:3000/productos').then(response => response.json())
+    .then(data => {
+      if (data.status) {
+        const productos = data.productos;  
+        const opcionesHTML = productos.map(producto => {
+          return `<img class="img-pro" src="${producto.imagen_producto}" alt="">`;
+        }).join('');
+  
+        document.getElementById('tablas-infopro').innerHTML = opcionesHTML;
+
+      } else {
+        console.log('No se encontraron productos:', data.message);
+      }
+    });
+
+}
+
+ObtenerProducto();
