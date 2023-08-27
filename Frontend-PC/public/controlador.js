@@ -211,9 +211,11 @@ function generarpag_factura(){
 }
 function generarpag_Listado(indice){
     var orden=ordenes[indice];
+    var MotoristaReal;
     console.log(orden);
-    console.log(UsuarioAlmacenado);
-    fetch('http://localhost:3000/motoristas/',{
+
+    console.log(UsuarioAlmacenado._id);
+    /*fetch(`http://localhost:3000/motoristas/${UsuarioAlmacenado._id}`,{
         method:'GET',
         headers:{
             'Content-type':'application/json'
@@ -222,7 +224,53 @@ function generarpag_Listado(indice){
         return respuesta.json();
     })
     //el segundo then es lo que devuelve postman osea la informacion en json para manipularla
-    .then(respuesta=>{});
+    .then(respuesta=>{
+       
+        console.log(respuesta);
+        MotoristaReal=respuesta;
+    });*/
+    
+      
+      // Realizar la solicitud usando fetch
+      const id=UsuarioAlmacenado._id;
+      const ordenconst={
+        "Productos": [
+          {
+            "precio": 30,
+            "unidades_disponibles": 40,
+            "unidades_vendidas": 20,
+            "nombre_producto": "Vestido",
+            "descripcion": "Vestido de fiesta",
+            "imagen_producto": "vestido.jpg"
+          },
+          {
+            "precio": 15,
+            "unidades_disponibles": 50,
+            "unidades_vendidas": 30,
+            "nombre_producto": "Zapatos",
+            "descripcion": "Zapatos elegantes",
+            "imagen_producto": "zapatos.jpg"
+          }
+        ],
+        "Estado": true,
+        "idRemitente": "925e974d824738001c0a2b84",
+        "idMotorista": "925e974d824738001c0a2b85"
+      };
+      fetch(`http://localhost:3000/motoristas/agregarorden/${id}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(orden)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Orden agregada:", data);
+          renderizarOrdenedeunMotorista();
+        })
+        .catch(error => {
+          console.error("Error al agregar la orden:", error);
+        });
     
 
 }
@@ -344,4 +392,58 @@ function generarordenes(){
     }
     
 }
+
+function renderizarOrdenedeunMotorista(){
+
+    document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_3.jpg)";
+    document.getElementById('cuerpo').innerHTML='';
+    document.getElementById('cuerpo').innerHTML=`
+    <div style="background-color:rgba(203, 108, 230, 0.57); border-radius: 25px; width: 200px; color: white; " ><h3 style="margin-left: 60px;">Pedidos</h3></div>
+        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.9029073682427!2d-87.16558362561544!3d14.082908489542948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbccab0600cbd%3A0xdf0463f5f53668f!2sUniversidad%20Nacional%20Autonoma%20de%20Honduras%20(UNAH)!5e0!3m2!1ses-419!2shn!4v1691550993033!5m2!1ses-419!2shn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="fondoR_2">
+        <h3>Estado de los paquetes</h3>
+        <div class="contenido_pag2">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px;" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP" >
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+        <div class="contenido_pag2">
+            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+            <p style="color: black; font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
+            <div class="Contenedor_buttonP">
+              
+                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
+                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
+            </div>
+        </div>
+    </div>
+    `;
+} 
 generarcontenido();

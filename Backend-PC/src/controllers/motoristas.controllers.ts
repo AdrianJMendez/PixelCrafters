@@ -96,3 +96,26 @@ export const guardarmotorista = async function (req: Request, res: Response) {
         res.status(500).send('Ocurrió un error al obtener los Motoristas.');
     }
 };
+export  const agregarunaorden= async function(req:Request,res:Response){
+  try {
+    const motoristaId = req.params.id;
+   const nuevaOrden=req.body;
+
+    const motorista = await motoristaSchema.findById(motoristaId);
+    if (!motorista) {
+        return res.status(404).send('Motorista no encontrado');
+    }
+    if (!motorista.Ordenes) {
+      motorista.Ordenes = [];
+  }
+
+         motorista.Ordenes.push(nuevaOrden);
+    await motorista.save();
+
+    res.json({ message: 'Orden agregada exitosamente' });
+} catch (error) {
+    console.error('Error al agregar la orden', error);
+    res.status(500).send('Ocurrió un error al agregar la orden');
+}
+
+}

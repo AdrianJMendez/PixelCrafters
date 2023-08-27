@@ -1,5 +1,5 @@
 import express from 'express';
-import { ObtenerallMotoristas, guardarmotorista, login, registerM } from '../controllers/motoristas.controllers';
+import { ObtenerallMotoristas, guardarmotorista, login, agregarunaorden, registerM } from '../controllers/motoristas.controllers';
 
 
 
@@ -11,7 +11,7 @@ router.get('/',ObtenerallMotoristas);
 router.post('/login',login );
 router.post('registro',registerM);
 router.post('/agregar',guardarmotorista);
-
+router.post('/agregarorden/:id',agregarunaorden);
 
 
 

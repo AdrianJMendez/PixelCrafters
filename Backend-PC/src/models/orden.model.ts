@@ -4,8 +4,8 @@ import { Producto } from "./productos.model";
 export interface Orden{
     Productos:Array<Producto>;
     Estado:boolean;
-    idRemitente: mongoose.Types.ObjectId;
-    idMotorista: mongoose.Types.ObjectId;
+    idRemitente?: mongoose.Types.ObjectId;
+    idMotorista?: mongoose.Types.ObjectId;
     ubicacion: string;
 
 }

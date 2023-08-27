@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObtenerallMotoristas = exports.registerM = exports.login = exports.guardarmotorista = void 0;
+exports.agregarunaorden = exports.ObtenerallMotoristas = exports.registerM = exports.login = exports.guardarmotorista = void 0;
 const motorista_schema_1 = require("../models/motorista.schema");
 const guardarmotorista = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -93,3 +93,26 @@ const ObtenerallMotoristas = function (req, res) {
     });
 };
 exports.ObtenerallMotoristas = ObtenerallMotoristas;
+const agregarunaorden = function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const motoristaId = req.params.id;
+            const nuevaOrden = req.body;
+            const motorista = yield motorista_schema_1.motoristaSchema.findById(motoristaId);
+            if (!motorista) {
+                return res.status(404).send('Motorista no encontrado');
+            }
+            if (!motorista.Ordenes) {
+                motorista.Ordenes = [];
+            }
+            motorista.Ordenes.push(nuevaOrden);
+            yield motorista.save();
+            res.json({ message: 'Orden agregada exitosamente' });
+        }
+        catch (error) {
+            console.error('Error al agregar la orden', error);
+            res.status(500).send('Ocurrió un error al agregar la orden');
+        }
+    });
+};
+exports.agregarunaorden = agregarunaorden;
