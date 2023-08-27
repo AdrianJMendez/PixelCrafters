@@ -45,6 +45,7 @@ const agregarOrden = function (req, res) {
             Productos: req.body.productos,
             Estado: false,
             idRemitente: req.body._id,
+            ubicacion: req.body.ubicacion
         };
         try {
             const orden = new orden_schema_1.ordenSchema(nvoOrden);

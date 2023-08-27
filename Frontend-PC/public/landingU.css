@@ -410,3 +410,12 @@ footer{
     background-color: #4A48BB;
     border-radius: 10px;
 }
+
+#inputUbi {
+    background-color: transparent;
+    border: none; 
+    border-bottom: 4px solid white; 
+    padding: 5px 0;
+    color: white; 
+    margin-top: 10px;
+  }

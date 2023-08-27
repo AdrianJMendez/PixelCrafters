@@ -6,5 +6,6 @@ export interface Orden{
     Estado:boolean;
     idRemitente: mongoose.Types.ObjectId;
     idMotorista: mongoose.Types.ObjectId;
+    ubicacion: string;
 
 }

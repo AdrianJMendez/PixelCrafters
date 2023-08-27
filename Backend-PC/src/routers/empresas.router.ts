@@ -1,5 +1,5 @@
 import express from 'express';
-import { ObtenerEmpresa, ObtenerEmpresas } from '../controllers/empresas.controller';
+import { ObtenerEmpresa, ObtenerEmpresas, agregarEmpresa } from '../controllers/empresas.controller';
 
 const router = express.Router();
 
@@ -9,7 +9,7 @@ router.get('',ObtenerEmpresas)
 
 router.get('/:id', ObtenerEmpresa)
 
-
+router.post('/agregar', agregarEmpresa);
 
 
 export default router;

@@ -55,6 +55,7 @@ function abrirInfoO(){
     document.getElementById('Empresas').style.display='none';
     document.getElementById('tabla-productos').style.display='none';
     cambiarBtnActivo(1);
+    obtenerOrdenes();
 }
 
 function abrirInfoOP(){
@@ -217,4 +218,128 @@ function obtenerEmpresas() {
         console.error('Error en la solicitud:', error);
       });
   }
+
+
+
   
+  function obtenerMotoristasActivos() {
+    let motoristasActivos = [];
+  
+    return fetch('http://localhost:3000/motoristas/')
+      .then(response => response.json())
+      .then(data => {
+        if (data != null) {
+          const motoristas = data;
+          motoristas.forEach(motorista => {
+            if (motorista.estado) {
+              motoristasActivos.push(`<li><a class="dropdown-item" href="#">${motorista.nombre}</a></li>`);
+            }
+          });
+          return motoristasActivos.join(''); // Unir los elementos del arreglo en una cadena
+        } else {
+          console.log('No se encontraron motoristas:', data.message);
+          return ''; // Devolver cadena vacía si no hay datos
+        }
+      });
+  }
+  
+
+  async function obtenerOrdenes() {
+    document.getElementById('Ordenes').innerHTML = '';
+    try {
+      const response = await fetch('http://localhost:3000/ordenes');
+      const data = await response.json();
+  
+      if (data != null) {
+        const ordenes = data;
+        for (const orden of ordenes) {
+          const productos = orden.Productos;
+          const renderProductos = productos.map(producto => {
+            return `
+                <div class="nvoPedido">
+                <div> <img src="${producto.imagen_producto}" alt=""></div>
+                <div>
+                    <h6>Usuario: ${orden.idRemitente}</h6><br>
+                    
+                </div>
+                <div>
+                    <h6>Nombre:${producto.nombre_producto}</h6><br>
+                    <h6>Cantidad: 1</h6><br>
+                    <h6>Metodo de pago: Visa</h6>
+                </div>
+            </div>   
+                `;
+          });
+  
+          const motoristaPromise = obtenerMotoristasActivos(); // Obtener la promesa de motoristas activos
+          const motoristasActivos = await motoristaPromise; // Esperar la resolución de la promesa
+  
+          document.getElementById('Ordenes').innerHTML += `
+          <div id="tablas-orden">
+          <div class="info-orden" id="">
+              ${renderProductos}
+              <div>
+                  <div class="dropdown-center">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Motoristas
+                      </button>
+                      <ul class="dropdown-menu" id="mActivos">
+                        ${motoristasActivos}
+                      </ul>
+                    </div>
+              </div>
+          </div>
+      </div>
+      
+      
+      
+          `;
+        }
+      }
+    } catch (error) {
+      console.error('Error en la solicitud:', error);
+    }
+  }
+  
+  function cambiarImagen(event) {
+    const archivoSeleccionado = event.target.files[0];
+    if (archivoSeleccionado) {
+        const imagenDiv = document.getElementById("img-eadd");
+        const imagen = imagenDiv.querySelector("img");
+        const inputLabel = imagenDiv.querySelector("label");
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            imagen.src = e.target.result;
+            imagen.style.display = "block"; // Muestra la imagen
+            inputLabel.innerHTML = ''; // Elimina el contenido del label
+            inputLabel.appendChild(imagen);
+            inputLabel.appendChild(event.target); // Mueve el input debajo de la imagen
+        };
+        reader.readAsDataURL(archivoSeleccionado);
+    }
+}
+
+const agregarEmpresa = async () => {
+  const payload = {
+    
+      nombre: document.getElementById('nameInput').value,
+      categoria: document.getElementById('catInput').value,
+      imagen: document.getElementById('archivo').value,
+      fecha_contrato: document.getElementById('contractDateInput').value,
+      descripcion: document.getElementById('descriptionInput').value,
+    
+  }
+
+  const result = await fetch('http://localhost:3000/empresas/agregar', {
+    headers: {'Content-type': 'application/json'},
+    body: JSON.stringify(payload),
+    method: 'POST'
+  });
+  const response = await result.json();
+  if (!response || !response.status) {
+    alert("fallo al crear nueva empresa");
+  } else {
+    alert("nueva empresa creada");
+  }
+  console.log(response);
+};

@@ -229,6 +229,25 @@ header img{
     margin: 10px; /* Ajusta el margen según tus necesidades */
 }
 
+#tablas-orden{
+    height: auto;
+    max-height: 600px;
+    width: 100%;
+    border: #FFB84E 3px solid;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: #FFFFFF ;
+    overflow: hidden;
+    overflow: auto;
+    
+}
+
+#tablas-orden > div {
+    display: inline-block; /* Elementos dentro del contenedor en línea */
+    width: auto; /* O ajusta según tus necesidades */
+    margin: 10px; /* Ajusta el margen según tus necesidades */
+}
+
 
 #Empresas{
     height: 100%;
@@ -253,6 +272,19 @@ header img{
     overflow: auto;
    
 }
+
+.info-orden{
+    background-color: #d9d9d9;
+    height: 300px;
+    min-width: 97%;
+    width: 100%;
+    border: #FFB84E 3px solid;
+    border-radius: 20px;
+    margin-top: 50px;
+    overflow: auto;
+   
+}
+
 
 .parent-infoe {
     display: grid;
@@ -435,4 +467,12 @@ header img{
 
 .img-pro:hover{
     filter: grayscale(1);
+}
+
+#archivo {
+    display: none; /* Oculta el input original */
+}
+
+.hidden {
+    display: none; /* Oculta el elemento */
 }
