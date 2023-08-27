@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.agregarunaorden = exports.ObtenerallMotoristas = exports.registerM = exports.login = exports.guardarmotorista = void 0;
+exports.obtenerallordenesM = exports.agregarunaorden = exports.ObtenerallMotoristas = exports.registerM = exports.login = exports.guardarmotorista = void 0;
 const motorista_schema_1 = require("../models/motorista.schema");
 const guardarmotorista = function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -116,3 +116,17 @@ const agregarunaorden = function (req, res) {
     });
 };
 exports.agregarunaorden = agregarunaorden;
+const obtenerallordenesM = function (req, res) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const motos = yield motorista_schema_1.motoristaSchema.find({ _id: req.params.id });
+            res.send(motos[0]);
+            res.end();
+        }
+        catch (error) {
+            console.error('Error al obtener las motorista::', error);
+            res.status(500).send('Ocurrió un error al obtener motorista');
+        }
+    });
+};
+exports.obtenerallordenesM = obtenerallordenesM;

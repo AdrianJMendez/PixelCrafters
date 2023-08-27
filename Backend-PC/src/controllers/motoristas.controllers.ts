@@ -119,3 +119,17 @@ export  const agregarunaorden= async function(req:Request,res:Response){
 }
 
 }
+
+
+export const obtenerallordenesM= async function(req:Request,res:Response){
+  try {
+    const motos = await motoristaSchema.find({_id:req.params.id});
+    res.send(motos[0]);
+    res.end();
+} catch (error) {
+    console.error('Error al obtener las motorista::', error);
+    res.status(500).send('Ocurrió un error al obtener motorista');
+}
+
+
+}

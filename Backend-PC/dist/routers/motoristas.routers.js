@@ -13,4 +13,5 @@ router.post('/login', motoristas_controllers_1.login);
 router.post('registro', motoristas_controllers_1.registerM);
 router.post('/agregar', motoristas_controllers_1.guardarmotorista);
 router.post('/agregarorden/:id', motoristas_controllers_1.agregarunaorden);
+router.get('/ordenes/:id', motoristas_controllers_1.obtenerallordenesM);
 exports.default = router;
