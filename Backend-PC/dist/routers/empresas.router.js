@@ -10,4 +10,5 @@ const router = express_1.default.Router();
 // http://localhost:3000/empresa
 router.get('', empresas_controller_1.ObtenerEmpresas);
 router.get('/:id', empresas_controller_1.ObtenerEmpresa);
+router.post('/agregar', empresas_controller_1.agregarEmpresa);
 exports.default = router;

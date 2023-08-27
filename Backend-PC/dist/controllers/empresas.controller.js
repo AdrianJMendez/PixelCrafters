@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ObtenerEmpresa = exports.ObtenerEmpresas = void 0;
+exports.agregarEmpresa = exports.ObtenerEmpresa = exports.ObtenerEmpresas = void 0;
 const empresas_schema_1 = require("../models/empresas.schema");
 const ObtenerEmpresas = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const empresas = yield empresas_schema_1.EmpresaSchema.find({}, {});
@@ -31,3 +31,29 @@ const ObtenerEmpresa = (req, res) => __awaiter(void 0, void 0, void 0, function*
     res.end();
 });
 exports.ObtenerEmpresa = ObtenerEmpresa;
+const agregarEmpresa = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const nvaEmpresa = {
+        nombre: req.body.nombre,
+        categoria: req.body.categoria,
+        imagen: req.body.imagen,
+        fecha_contrato: req.body.fecha_contrato,
+        descripcion_productos: req.body.descripcion
+    };
+    try {
+        const empresa = new empresas_schema_1.EmpresaSchema(nvaEmpresa);
+        yield empresa.save();
+        res.send({
+            status: true,
+            message: 'empresa agregado con exito',
+            empresa
+        });
+    }
+    catch (error) {
+        res.status(500).send({
+            status: false,
+            message: 'Error al agregar el empresa',
+            error
+        });
+    }
+});
+exports.agregarEmpresa = agregarEmpresa;

@@ -318,3 +318,28 @@ function obtenerEmpresas() {
         reader.readAsDataURL(archivoSeleccionado);
     }
 }
+
+const agregarEmpresa = async () => {
+  const payload = {
+    
+      nombre: document.getElementById('nameInput').value,
+      categoria: document.getElementById('catInput').value,
+      imagen: document.getElementById('archivo').value,
+      fecha_contrato: document.getElementById('contractDateInput').value,
+      descripcion: document.getElementById('descriptionInput').value,
+    
+  }
+
+  const result = await fetch('http://localhost:3000/empresas/agregar', {
+    headers: {'Content-type': 'application/json'},
+    body: JSON.stringify(payload),
+    method: 'POST'
+  });
+  const response = await result.json();
+  if (!response || !response.status) {
+    alert("fallo al crear nueva empresa");
+  } else {
+    alert("nueva empresa creada");
+  }
+  console.log(response);
+};

@@ -566,11 +566,12 @@ async function pagar(){
   const usuarioJSON = localStorage.getItem("usuario");
   const usuario = JSON.parse(usuarioJSON);
 
+  const Ubicacion = document.getElementById('inputUbi').value;
   
     const payload = {
       productos: carrito,
       _id: usuario._id,
-
+      ubicacion: Ubicacion,
     }
     console.log("Login", payload);
     const result = await fetch('http://localhost:3000/ordenes/add', {
