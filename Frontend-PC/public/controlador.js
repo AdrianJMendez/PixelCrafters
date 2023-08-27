@@ -1,5 +1,6 @@
 const UsuarioAlmacenado = JSON.parse(localStorage.getItem("motorista"));
 const nombreM = UsuarioAlmacenado.nombre;
+var ordenes=[];
 function generarcontenido(){
 document.getElementById('cuerpo').innerHTML+=`
 
@@ -9,7 +10,7 @@ document.getElementById('cuerpo').innerHTML+=`
 <h3>Hola</h3>
 <h3>${nombreM}</h3>
 </div>
-<div class="contenido_pag1" onclick="generarPD()"id="contendor_2">
+<div class="contenido_pag1" onclick="generarordenes()"id="contendor_2">
 <h5>Pedidos Disponibles</h5>
 </div>
 <div class="contenido_pag1" onclick="generarpagFinanzas()"id="contendor_3">
@@ -74,8 +75,8 @@ document.getElementById('cuerpo').innerHTML=`
 
 
 }
-function generarpagFinanzas(){
-
+function generarpagFinanzas(orden){
+   
     document.getElementById('imgfondo').style.backgroundImage= "url(assets/UI/fondo_3.jpg)";
     document.getElementById('cuerpo').innerHTML='';
     document.getElementById('cuerpo').innerHTML=`
@@ -208,58 +209,21 @@ function generarpag_factura(){
     `;
 
 }
-function generarpag_Listado(){
-
-    document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_3.jpg)";
-    document.getElementById('cuerpo').innerHTML='';
-    document.getElementById('cuerpo').innerHTML=`
-    <div style="background-color:rgba(203, 108, 230, 0.57); border-radius: 25px; width: 200px; color: white; " ><h3 style="margin-left: 60px;">Pedidos</h3></div>
-        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.9029073682427!2d-87.16558362561544!3d14.082908489542948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbccab0600cbd%3A0xdf0463f5f53668f!2sUniversidad%20Nacional%20Autonoma%20de%20Honduras%20(UNAH)!5e0!3m2!1ses-419!2shn!4v1691550993033!5m2!1ses-419!2shn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-    <div class="fondoR_2">
-        <h3>Estado de los paquetes</h3>
-        <div class="contenido_pag2">
-            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
-            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
-            <div class="Contenedor_buttonP">
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px;" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
-            </div>
-        </div>
-        <div class="contenido_pag2">
-            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
-            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
-            <div class="Contenedor_buttonP">
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
-            </div>
-        </div>
-        <div class="contenido_pag2">
-            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
-            <p style="color: black;font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
-            <div class="Contenedor_buttonP" >
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
-            </div>
-        </div>
-        <div class="contenido_pag2">
-            <img src="/public/assets/Imagenes/11.jpg"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
-            <p style="color: black; font-size: 10px;">Orden #12990 <br>Usuario:Oscar_Estrada<br>Nombre:Taza_Ikea<br>Cantidad:(2)</p>
-            <div class="Contenedor_buttonP">
-              
-                <img class="icon" style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/pngwing.com (5).png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/iconomotorista-entregapaquete.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/ubicacion.png" alt="">
-                <img style="width: 20px; height: 20px; margin-right: 4px" src="/public/assets/Imagenes/iconos/check.png" alt=""> 
-            </div>
-        </div>
-    </div>
-    `;
+function generarpag_Listado(indice){
+    var orden=ordenes[indice];
+    console.log(orden);
+    console.log(UsuarioAlmacenado);
+    fetch('http://localhost:3000/motoristas/',{
+        method:'GET',
+        headers:{
+            'Content-type':'application/json'
+        }
+    }).then(respuesta=>{
+        return respuesta.json();
+    })
+    //el segundo then es lo que devuelve postman osea la informacion en json para manipularla
+    .then(respuesta=>{});
+    
 
 }
 function generarpag_PDmap(){
@@ -306,5 +270,78 @@ function ocultarmenu(){
     document.getElementById('miCollapse').style.display='none';
     document.getElementById('boton_menu').style.display='none';
 
+}
+function generarordenes(){
+    
+    fetch('http://localhost:3000/ordenes/',{
+        method:'GET',
+        headers:{
+            'Content-type':'application/json'
+        }
+    }).then(respuesta=>{
+        return respuesta.json();
+    })
+    //el segundo then es lo que devuelve postman osea la informacion en json para manipularla
+    .then(respuesta=>{
+        //aqui es donde va toda la logica no en otra parte 
+        ordenes=respuesta;
+        console.log('esta funcionando el bakend');
+        //renderizar aqui si va tener la info
+        renderizarordenes();
+
+    }).catch(error=>{
+        console.log(error);
+    })
+    const renderizarordenes= ()=>{
+        //usar el arreglo aqui, siempre y cuando se llame en el segundo then:
+        document.getElementById('imgfondo').style.backgroundImage= "url(/public/assets/UI/fondo_2.jpg)";
+        document.getElementById('cuerpo').innerHTML='';
+        document.getElementById('cuerpo').innerHTML='';
+       
+        
+        
+        
+        ordenes.forEach((app, i) => {
+            
+           
+            document.getElementById('cuerpo').innerHTML+=`
+                <h5 style="color:White">Orden ${i+1}</h5>
+            <div class="fondoR_2"  >
+                   <div id="fondo${i}"></div>
+            
+                    </div>
+                    <div class="Contenedor_button">
+                    <button class="button_pag2" style="background-color:rgba(133, 68, 143, 1) ;"onclick="generarpag_Listado(${i})">Tomar Pedido</button>
+                    <button class="button_pag2" style="background-color: rgba(14, 41, 137, 0.6);" onclick="generarpag_PDmap()">Ver Ubicacion</button> 
+                </div>
+            `;
+            
+            generarproductos(app.Productos,i);
+          
+        
+
+
+
+        });
+    }
+ function generarproductos(Productos,i){
+        Productos.forEach((app,j)=>{
+            document.getElementById(`fondo${i}`).innerHTML+=`
+            
+
+            
+        
+            <div class="contenido_pag2">
+                <img src="${app.imagen_producto}"  alt="" style="margin-right: 10px;margin-left: 10px; border-radius: 30px;width: 60px; height: 70px;  ">
+                <p style="color: black;">${app.nombre_producto}<br> ${app.descripcion}</p>
+                
+            </div>
+            
+            
+            `
+        })
+
+    }
+    
 }
 generarcontenido();
